@@ -1,0 +1,3051 @@
+{
+ "generated_at": "2026-09-21T13:16:14",
+ "tiers": {
+  "tier3_real": {
+   "tier": 3,
+   "name": "conversations",
+   "config": {
+    "provider": "gemini",
+    "PROMOTION_THRESHOLD": 0.6,
+    "RETRIEVAL_FLOOR": 0.25
+   },
+   "metrics": {
+    "scripts_passed": "9/10",
+    "turns_passed": "18/19"
+   },
+   "rows": [
+    {
+     "script": "new_user",
+     "turn": 0,
+     "say": "Hello",
+     "expected": {
+      "missing_profile": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": true
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 0,
+     "say": "My name is Rahul. I'm planning to switch jobs next year.",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 1,
+     "say": "What should I focus on for my career?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 2,
+     "say": "Why do you say that?",
+     "expected": {
+      "followup": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": true,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "new_session_recall",
+     "turn": 0,
+     "say": "I am planning to switch jobs next year",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "new_session_recall",
+     "turn": 1,
+     "say": "What do you remember about my career goals?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "irrelevant_chatter",
+     "turn": 0,
+     "say": "I had tea at 4pm",
+     "expected": {
+      "stored": false
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "correction",
+     "turn": 0,
+     "say": "I live in Delhi",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "correction",
+     "turn": 1,
+     "say": "Actually I am moving to Bangalore next month",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "correction",
+     "turn": 2,
+     "say": "Where should I settle down?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false,
+     "script_ok": false
+    },
+    {
+     "script": "missing_profile",
+     "turn": 0,
+     "say": "I want to switch careers",
+     "expected": {
+      "missing_profile": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": true
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "health_context",
+     "turn": 0,
+     "say": "I have a chronic back problem and I enjoy long distance running",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "health_context",
+     "turn": 1,
+     "say": "How is my health looking this year?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "no_relevant_context",
+     "turn": 0,
+     "say": "What is my lucky number?",
+     "expected": {
+      "retrieved": false
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 0,
+     "say": "I want to get a promotion this year",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 1,
+     "say": "I also want to start my own company",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 2,
+     "say": "What should I prioritise in my career?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "preference_language",
+     "turn": 0,
+     "say": "I prefer replies in Hindi",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "preference_language",
+     "turn": 1,
+     "say": "What does this month hold for me?",
+     "expected": {},
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    }
+   ],
+   "judged": [
+    {
+     "script": "intro_and_goal",
+     "user": "c_rahul",
+     "session": "intro_and_goal-s1",
+     "question": "What should I focus on for my career?",
+     "context_used": [
+      "switch jobs next year",
+      "user_profile"
+     ],
+     "history": [
+      "My name is Rahul. I'm planning to switch jobs next year.",
+      "Hello Rahul. As a Leo, your career thrives when you have creative ownership, clear authority, and room to grow rather than being micromanaged. The upcoming year brings supportive shifts for you\u2014particularly from late spring onward, when planetary transits favor expansion, strategic networking, and moving into roles that elevate your professional standing. \n\nFor the smoothest transition, spend the early months of the year refining your portfolio and quietly activating your professional circle. Aim for opportunities that offer autonomy and leadership rather than just a lateral salary bump, as aligning with your natural fiery drive will bring the lasting fulfillment you're looking for."
+     ]
+    },
+    {
+     "script": "intro_and_goal",
+     "user": "c_rahul",
+     "session": "intro_and_goal-s1",
+     "question": "Why do you say that?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "My name is Rahul. I'm planning to switch jobs next year.",
+      "Hello Rahul. As a Leo, your career thrives when you have creative ownership, clear authority, and room to grow rather than being micromanaged. The upcoming year brings supportive shifts for you\u2014particularly from late spring onward, when planetary transits favor expansion, strategic networking, and moving into roles that elevate your professional standing. \n\nFor the smoothest transition, spend the early months of the year refining your portfolio and quietly activating your professional circle. Aim for opportunities that offer autonomy and leadership rather than just a lateral salary bump, as aligning with your natural fiery drive will bring the lasting fulfillment you're looking for.",
+      "What should I focus on for my career?",
+      "Rahul, focus on positioning yourself as an anchor and a strategist rather than just an executor. Leo energy naturally commands respect, so direct your efforts toward roles where you manage end-to-end projects, mentor others, or represent the \"face\" of an initiative. Right now, auditing your public professional persona\u2014polishing your resume and making your tangible impact obvious\u2014will yield the highest return.\n\nPractically speaking, resist the urge to jump at the first offer simply to leave your current desk. Prioritize environments with strong leadership that value merit, and use the coming months to close any technical or strategic skill gaps so you enter interviews negotiating from a place of unshakeable confidence."
+     ]
+    },
+    {
+     "script": "new_session_recall",
+     "user": "c_rahul",
+     "session": "new_session_recall-s2",
+     "question": "What do you remember about my career goals?",
+     "context_used": [
+      "switch jobs next year",
+      "planning to switch jobs next year",
+      "user_profile"
+     ],
+     "history": []
+    },
+    {
+     "script": "correction",
+     "user": "c_move",
+     "session": "correction-s1",
+     "question": "Where should I settle down?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "I live in Delhi",
+      "Nice to know you're in Delhi, Vikram. Moving from the coastal, salt-air rhythms of Chennai to the sharp, intense seasons of the capital can really shift your everyday energy\u2014especially for an intuitive Water sign like Scorpio, where your environment deeply impacts your mental focus and stress levels. \n\nI've noted your location down. What\u2019s currently on your mind\u2014are you navigating a shift in your work, personal life, or just looking to understand your current transits better?",
+      "Actually I am moving to Bangalore next month",
+      "Bangalore is going to be a refreshing change, Vikram. Shifting from Delhi\u2019s extremes to Bangalore\u2019s balanced, greener rhythm often feels like a deep exhale, especially for a Scorpio. Water signs thrive when the physical environment allows for mental clarity and less sensory overload. \n\nAstrologically, relocating activates your chart's houses of travel and home (the 3rd, 4th, and 9th/12th axes depending on the exact nature of the move). Is this transition tied to an exciting new career leap, or are you looking for a lifestyle reset closer to your South Indian roots?"
+     ]
+    },
+    {
+     "script": "health_context",
+     "user": "c_health",
+     "session": "health_context-s1",
+     "question": "How is my health looking this year?",
+     "context_used": [
+      "chronic back problem",
+      "user_profile"
+     ],
+     "history": [
+      "I have a chronic back problem and I enjoy long distance running",
+      "As an Air sign, your Gemini nature thrives on the mental release and rhythmic freedom of long-distance running\u2014it clears your fast-moving thoughts. However, continuous pounding directly spikes *Vata* (the element of air and movement), which naturally dries out the joints and settles as tension in the spine. Your passion isn't inherently at odds with your body, but your spine is signaling that the impact is outpacing your recovery.\n\nTo keep running without sacrificing your back, bring in grounding Earth energy to stabilize you. Shift more of your miles from hard asphalt to softer dirt trails, integrate dedicated core and hip-strengthening work, and try rubbing warm sesame oil into your lower back before a warm shower after long runs. With deliberate support for your structural foundation, you can protect your back while honoring your need to run."
+     ]
+    },
+    {
+     "script": "no_relevant_context",
+     "user": "c_health",
+     "session": "no_relevant_context-s1",
+     "question": "What is my lucky number?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": []
+    },
+    {
+     "script": "multi_goal",
+     "user": "c_multi",
+     "session": "multi_goal-s1",
+     "question": "What should I prioritise in my career?",
+     "context_used": [
+      "to get a promotion this year",
+      "start my own company",
+      "user_profile"
+     ],
+     "history": [
+      "I want to get a promotion this year",
+      "Hello Sanjay. As an Aquarius, your career progression is anchored by Saturn, which rewards steady discipline, systems-thinking, and quiet reliability over office politics or flashy displays. This year holds strong momentum for professional advancement, provided you make your value tangible. Saturn asks you to transition from doing great individual work to visibly owning outcomes\u2014start documenting the exact operational impact, efficiency gains, and cost or time savings your recent projects have delivered.\n\nSchedule a proactive growth check-in with your manager rather than waiting for annual reviews; ask directly what specific metrics or leadership responsibilities you need to hit over the next two quarters to lock in that step up. To channel this energy in daily life, focus on mentoring a junior colleague\u2014an act aligned with your sign\u2019s communal nature\u2014and keep your Saturday routines structured and purposeful to strengthen your focus.",
+      "I also want to start my own company",
+      "That entrepreneurial pull fits you naturally, Sanjay\u2014Aquarius rules original, disruptive concepts, and your Jaipur roots carry strong commercial instincts. However, Saturn\u2019s current influence strongly advises against leaping impulsively while you\u2019re tracking a promotion. The most astrologically aligned approach right now is to treat the promotion as the launchpad: secure the higher title, salary, and executive visibility at work to fund, network, and validate your business quietly in the background. \n\nFor the next six to nine months, run this as an intentional side-hustle. Spend weeknights and Saturdays on market research, minimum-viable-product testing, and clarifying your unit economics before registering an entity or taking financial risks. When you use your day job to build resilience and capital rather than treating it as a trap, you set the foundation for a venture that lasts rather than one that burns out fast."
+     ]
+    },
+    {
+     "script": "preference_language",
+     "user": "c_pref",
+     "session": "preference_language-s1",
+     "question": "What does this month hold for me?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "I prefer replies in Hindi",
+      "\u0928\u092e\u0938\u094d\u0924\u0947 \u092a\u094d\u0930\u093f\u092f\u093e! \u092c\u093f\u0932\u094d\u0915\u0941\u0932, \u0905\u092c \u0938\u0947 \u0939\u092e \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u0939\u0940 \u092c\u093e\u0924 \u0915\u0930\u0947\u0902\u0917\u0947\u0964 \u0906\u092a\u0915\u0940 \u0915\u0928\u094d\u092f\u093e \u0930\u093e\u0936\u093f (Virgo) \u0914\u0930 \u092a\u0943\u0925\u094d\u0935\u0940 \u0924\u0924\u094d\u0935 \u0906\u092a\u0915\u094b \u0938\u094d\u0935\u092d\u093e\u0935 \u0938\u0947 \u092c\u0947\u0939\u0926 \u0938\u092e\u091d\u0926\u093e\u0930, \u0935\u094d\u092f\u093e\u0935\u0939\u093e\u0930\u093f\u0915 \u0914\u0930 \u091c\u093c\u092e\u0940\u0928 \u0938\u0947 \u091c\u0941\u0921\u093c\u093e \u0939\u0941\u0906 \u092c\u0928\u093e\u0924\u0947 \u0939\u0948\u0902\u0964 \n\n\u0906\u091c \u0906\u092a\u0915\u0947 \u092e\u0928 \u092e\u0947\u0902 \u0915\u094d\u092f\u093e \u091a\u0932 \u0930\u0939\u093e \u0939\u0948? \u091a\u093e\u0939\u0947 \u0915\u0930\u093f\u092f\u0930 \u0915\u094b \u0932\u0947\u0915\u0930 \u0915\u094b\u0908 \u0938\u0935\u093e\u0932 \u0939\u094b, \u0928\u093f\u091c\u0940 \u091c\u0940\u0935\u0928 \u0915\u0940 \u092c\u093e\u0924 \u0939\u094b \u092f\u093e \u0906\u0928\u0947 \u0935\u093e\u0932\u0947 \u0938\u092e\u092f \u0915\u0940 \u092f\u094b\u091c\u0928\u093e\u2014\u0906\u092a \u092c\u0947\u091d\u093f\u091d\u0915 \u0938\u093e\u091d\u093e \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0948\u0902\u0964 \u0939\u092e \u092e\u093f\u0932\u0915\u0930 \u090f\u0915 \u0938\u0939\u0940 \u0914\u0930 \u0938\u094d\u092a\u0937\u094d\u091f \u0930\u093e\u0939 \u0928\u093f\u0915\u093e\u0932\u0947\u0902\u0917\u0947\u0964"
+     ]
+    }
+   ]
+  },
+  "tier4": {
+   "tier": 4,
+   "name": "quality",
+   "judge": "gemini-3.8-flash",
+   "rank_judge": "glm-5.3:cloud",
+   "candidates": [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "deepseek-v4-flash:cloud",
+    "deepseek-v4.1-flash:cloud"
+   ],
+   "metrics": {
+    "advice_on_vs_off": {
+     "on": 17,
+     "off": 4,
+     "tie": 3
+    },
+    "personalised_on_vs_off": {
+     "on": 16,
+     "off": 5,
+     "tie": 3
+    },
+    "invented_facts_brain_on": 2,
+    "invented_facts_brain_off": 6,
+    "controls_advice": {
+     "on": 5,
+     "off": 3,
+     "tie": 0
+    },
+    "per_model": {
+     "gemini-3.7-flash": {
+      "advice": {
+       "on": 6,
+       "off": 0,
+       "tie": 0
+      },
+      "personalised": {
+       "on": 6,
+       "off": 0,
+       "tie": 0
+      },
+      "invented_on": 0
+     },
+     "deepseek-v4.1-flash:cloud": {
+      "advice": {
+       "on": 4,
+       "off": 1,
+       "tie": 1
+      },
+      "personalised": {
+       "on": 3,
+       "off": 1,
+       "tie": 2
+      },
+      "invented_on": 1
+     },
+     "gemini-3.8-flash": {
+      "advice": {
+       "on": 5,
+       "off": 0,
+       "tie": 1
+      },
+      "personalised": {
+       "on": 4,
+       "off": 1,
+       "tie": 1
+      },
+      "invented_on": 0
+     },
+     "deepseek-v4-flash:cloud": {
+      "advice": {
+       "on": 2,
+       "off": 3,
+       "tie": 1
+      },
+      "personalised": {
+       "on": 3,
+       "off": 3,
+       "tie": 0
+      },
+      "invented_on": 1
+     }
+    },
+    "model_rank_points": {
+     "deepseek-v4.1-flash:cloud": 27,
+     "deepseek-v4-flash:cloud": 23,
+     "gemini-3.8-flash": 15,
+     "gemini-3.7-flash": 15
+    },
+    "judged_pairs": 24,
+    "control_pairs": 8,
+    "judge_errors": 0
+   },
+   "pairs": [
+    {
+     "question": "What should I focus on for my career?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B leverages the remembered context about switching jobs next year to provide tailored, practical positioning advice without inventing any facts.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B provides actionable career guidance while seamlessly incorporating the known detail about switching jobs next year, whereas Answer A merely asks follow-up questions.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "off",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": true,
+     "reason": "B gives stronger astrological career advice utilizing Rahul's age for a Saturn return reading, but invents that he has asked this before.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": true,
+     "reason": "Answer B provides clear, actionable career advice while skillfully integrating Rahul's Leo sign and timeline without hallucinating a specific interaction history like A did.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "gemini-3.8-flash",
+     "is_control": true,
+     "advice_winner": "off",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B directly explains 'why' using the known birth date and sign while appropriately clarifying the need for birth time to provide deeper insights.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "gemini-3.7-flash",
+     "is_control": true,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B directly references Rahul's specific known birth date and location to explain why its previous statements were limited, making it both more personalized and grounded.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": true,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B directly answers why its responses have been repetitive by explaining the technical limitations of only having Rahul's birth date and place without a birth time.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": true,
+     "advice_winner": "on",
+     "personalised_winner": "tie",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both answers address the conversational impasse well without inventing user facts or utilizing the profile data, but B provides a more constructive, contextual clarification.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "B accurately recalled the user's recorded career goal to switch jobs next year, whereas A falsely claimed to have no memory of it.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A correctly remembered the user's plan to switch jobs next year, whereas Answer B claimed to remember nothing.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "tie",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both give nearly identical appropriate guidance, but Answer A is slightly more personalized by addressing the user by name.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A correctly references the known fact that the user is planning to switch jobs next year, whereas Answer B falsely denies having that information.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "tie",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both answers properly use the user's known profile without inventing facts, but Answer B provides much more thoughtful, practical, and grounded guidance on what kind of environment suits him.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": true,
+     "reason": "Answer A hallucinates that Rahul has asked this question before ('coming back to this question'), whereas Answer B provides actual astrological advice tailored to his known sign and birthplace without inventing facts.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A directly answers the question with specific regional directions relative to his birthplace, whereas B refuses to answer until the user provides options.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": true,
+     "reason": "Answer A hallucinates conversation history by claiming it has answered four times, while Answer B provides specific actionable locations tied accurately to his profile.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "tie",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A directly addresses the known chronic back problem under the guise of astrological transits, while neither invents hard facts outside standard astrological cold reading.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A subtly weaves in Rahul's remembered chronic back issue with upper back tension, making it more tailored while offering solid, safe advice without inventing facts.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "off",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "A effectively weaves in the user's known back problem, while B offers more grounded, practical wellness advice.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "tie",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both handle the repetitive health anxiety responsibly without inventing facts, but B gives slightly more constructive advice by specifically addressing health anxiety and practical self-care.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "gemini-3.8-flash",
+     "is_control": true,
+     "advice_winner": "on",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both correctly apply numerological principles from the user's known birth details without inventing facts, but Answer B personalises with the user's name while Answer A gives slightly clearer practical advice.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "gemini-3.7-flash",
+     "is_control": true,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B is more personalized by directly connecting the numbers to his Leo sign and birth date, and offers superior advice by explaining when to use each number.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": true,
+     "advice_winner": "off",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B connects the numbers directly to Rahul's specific profile facts (Leo and 15th birth date), while Answer A gives better practical guidance on how to apply them.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": true,
+     "advice_winner": "off",
+     "personalised_winner": "tie",
+     "invented_on": true,
+     "invented_off": false,
+     "reason": "Answer B falsely hallucinates conversational history by claiming Rahul has asked this question multiple times.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A directly addresses Rahul's specific remembered goals of getting a promotion and starting his own company, making it both better tailored and more actionable advice.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B subtly weaves in both remembered goals (promotion/boardroom and starting his own business/empire) with actionable, superior advice.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer B offers superior, actionable career strategy integrating both goals, while Answer A weaves in his name and astrological sign more directly.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "off",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both correctly integrate Rahul's competing goals (promotion vs. startup) without hallucinating facts, but Answer B provides concrete, actionable options on how to proceed.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "gemini-3.8-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "off",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Both stick to known details without inventing facts, but B weaves in Delhi alongside fire and Leo traits to feel more personalized, while A offers clearer, more balanced monthly guidance.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "gemini-3.7-flash",
+     "is_control": false,
+     "advice_winner": "on",
+     "personalised_winner": "on",
+     "invented_on": false,
+     "invented_off": false,
+     "reason": "Answer A effectively utilizes the user's age and zodiac sign, whereas Answer B makes an unprompted assumption about repetitive questioning without using known astrological data.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "deepseek-v4-flash:cloud",
+     "is_control": false,
+     "advice_winner": "off",
+     "personalised_winner": "off",
+     "invented_on": true,
+     "invented_off": true,
+     "reason": "Both models falsely invent prior chat history claiming the user repeated the question multiple times, but B explicitly weaves in known birth details and gives more grounded practical advice.",
+     "shown_as": "on/off",
+     "judged_by": "gemini-3.8-flash"
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "is_control": false,
+     "advice_winner": "tie",
+     "personalised_winner": "tie",
+     "invented_on": true,
+     "invented_off": true,
+     "reason": "Both models hallucinate an unprompted conversation history claiming the user repeatedly asked the question multiple times, though both offer equally reasonable boundary-setting advice.",
+     "shown_as": "off/on",
+     "judged_by": "gemini-3.8-flash"
+    }
+   ],
+   "ranks": [
+    {
+     "question": "What should I focus on for my career?",
+     "ranking": [
+      "deepseek-v4.1-flash:cloud",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.8-flash",
+      "gemini-3.7-flash"
+     ],
+     "reason": "Answer 2 gives the most concrete, measurable plan (weekly skill blocks, monthly networking targets, a February deadline) and uniquely addresses the user's real block\u2014repeatedly asking signals fear of committing, not lack of options."
+    },
+    {
+     "question": "Why do you say that?",
+     "ranking": [
+      "gemini-3.7-flash",
+      "deepseek-v4.1-flash:cloud",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.8-flash"
+     ],
+     "reason": "Answer 4 directly answers the 'why' with a concrete, honest reason tied to the user's actual birth details, then clearly invites specific input."
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "ranking": [
+      "deepseek-v4-flash:cloud",
+      "gemini-3.8-flash",
+      "gemini-3.7-flash",
+      "deepseek-v4.1-flash:cloud"
+     ],
+     "reason": "Answer 3 demonstrates the fullest recall (goal, name, Leo sign), honestly flags what's still unknown, and offers a concrete next step for timing the move."
+    },
+    {
+     "question": "Where should I settle down?",
+     "ranking": [
+      "deepseek-v4.1-flash:cloud",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.8-flash",
+      "gemini-3.7-flash"
+     ],
+     "reason": "Answer 4 directly names specific cities (Noida, Lucknow, Kolkata), explains the directional logic, warns against unfavorable directions, and offers a clear decision rule without asking more questions."
+    },
+    {
+     "question": "How is my health looking this year?",
+     "ranking": [
+      "deepseek-v4.1-flash:cloud",
+      "gemini-3.8-flash",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.7-flash"
+     ],
+     "reason": "Answer 3 is the only one that addresses the real issue\u2014Rahul asking the same health question a fourth time\u2014by naming possible health anxiety and directing him to see a doctor, rather than feeding the reassurance cycle with yet another reading."
+    },
+    {
+     "question": "What is my lucky number?",
+     "ranking": [
+      "deepseek-v4.1-flash:cloud",
+      "gemini-3.7-flash",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.8-flash"
+     ],
+     "reason": "Answer 4 is the only one that notices the user has asked repeatedly, commits to a single primary number (6), and gives a simple rule for when to use 1 instead."
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "ranking": [
+      "deepseek-v4.1-flash:cloud",
+      "deepseek-v4-flash:cloud",
+      "gemini-3.7-flash",
+      "gemini-3.8-flash"
+     ],
+     "reason": "Answer 2 is the only one that recognizes a fourth identical question signals decision paralysis rather than missing advice, and it targets the real blocker instead of adding another version of guidance the user already has."
+    },
+    {
+     "question": "What does this month hold for me?",
+     "ranking": [
+      "deepseek-v4-flash:cloud",
+      "deepseek-v4.1-flash:cloud",
+      "gemini-3.8-flash",
+      "gemini-3.7-flash"
+     ],
+     "reason": "Answer 1 uniquely combines specific, dated transit guidance with concrete action steps while directly addressing the repeated asking and funneling the user toward one clear goal."
+    }
+   ],
+   "generations": [
+    {
+     "question": "What should I focus on for my career?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "Rahul, with your Sun in Leo, your career thrives when you have genuine ownership and room to lead\u2014not when you\u2019re boxed into repetitive routines. Since your goal is to make a clean transition into a new role next year, this current phase isn't meant for hasty exits. Instead, treat it as your season of strategic positioning. Focus on taking charge of high-impact, visible projects right where you are so you have undeniable, concrete wins to showcase on your resume.\n\nBehind the scenes, start quietly laying the groundwork. Strengthen your specialized skills, refine your portfolio, and reactivate key professional connections without broadcasting your plans just yet. Leo energy commands the most respect when backed by calm, deliberate preparation\u2014set the foundation now, and by next year, the right opportunities will naturally align with your worth.",
+     "brain_off": "Rahul, as a fiery Leo, your professional strength lies in roles where you can command projects, mentor others, and take visible responsibility. Right now, your main focus should be moving away from background execution and stepping into strategic ownership. Look for opportunities at work to solve high-visibility problems or lead cross-functional initiatives\u2014this naturally activates your regal, authoritative energy and gets you noticed by decision-makers.\n\nAt the same time, anchor that bold fire with steady discipline. Cultivate one rare, highly specialized skill that sets you apart from your peers, and deliberately expand your professional network through warm, one-on-one relationships. When you combine natural charisma with undeniable technical leverage, you stop waiting for promotions and start attracting the leadership roles meant for you.",
+     "context_used": [
+      "switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "Rahul, with your strong Leo energy, your deepest career satisfaction comes from creative authority and purpose, not just a paycheck or a title bump. As you prepare for next year\u2019s transition, focus on getting absolute clarity on the *type* of environment you belong in. Look for spaces that value autonomy and initiative over micromanagement. Define the specific niche or problem you want to be known for solving, and make that your signature strength.\n\nPractically, channel your fire into public-facing competence: sharpen your presentation skills, refine your professional storytelling, and build a reputation as a dependable anchor in your field. In Vedic astrology, the Sun shines brightest through consistency and integrity\u2014when you master your craft with quiet confidence today, you make next year\u2019s leap smooth, natural, and deeply rewarding.",
+     "brain_off": "Rahul, to make this most useful for you, let\u2019s narrow the focus. As a Leo, you thrive in leadership and autonomy, but your next step depends on where you feel stuck right now: are you weighing a specific career change, navigating a challenge with management, or looking to step into a higher leadership role? \n\nTell me a bit about your current industry and what\u2019s currently on your mind\u2014once I know the specific crossroads you're facing, we can look at the most practical, aligned strategy for you.",
+     "context_used": [
+      "switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "Since your goal is switching jobs next year, your focus right now should be building your \"proof of impact.\" As a Leo, you shine when you have a stage, so start documenting every win from the last 12 months\u2014projects you led, problems you solved, and numbers you moved. This isn't just a list; it's your narrative for interviews and negotiations.\n\nConcretely, polish your LinkedIn and resume to tell a story of growth and visible leadership. Practice your interview pitch until it feels natural\u2014your Sun-ruled confidence is your superpower, but it needs to be backed by specific examples. Aim to start serious applications in March or April, when hiring budgets typically open up, so you enter next year with momentum and clarity.",
+     "brain_off": "I hear you asking this again, which tells me you're in a deep decision window, not just casual curiosity. Right now, you're entering your Saturn return phase (around ages 29-30)\u2014a powerful period for career restructuring. Your focus should shift from *finding* the perfect role to *mastering* structure in your current one. Choose one high-visibility project at work and own it completely, even if it feels uncomfortable. This is your time to build proof of authority, not just creative spark.\n\nConcretely, stop scattering your Leo fire across many ideas. Pick the single skill or domain that feels most aligned with your natural confidence\u2014whether that's leadership, strategy, or public speaking\u2014and go deep. Spend the next few months turning that into a measurable achievement you can point to. That one win will become the unshakeable foundation for your job switch next year. Trust that the discipline you build now will make your natural radiance undeniable when you step into that next interview.",
+     "context_used": [
+      "switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I focus on for my career?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, since you're asking this repeatedly, the real answer is: stop searching for the perfect focus and start building a transferable story for next year's switch. Pick one visible project at your current job, own it fully, and track every measurable result\u2014revenue saved, time cut, team led. Your Leo Sun needs a stage, so make your work impossible to ignore.\n\nConcretely, block two hours a week for one skill your target industry values, and talk to three people a month in that field. Aim to have your resume, LinkedIn, and interview stories ready by February. If you're still circling, the block isn't lack of options\u2014it's fear of committing. Choose one direction, even imperfectly, and let momentum teach you the rest.",
+     "brain_off": "Rahul, this is the fourth time you've asked me the same question, and I don't think another career tip is what you need. The advice hasn't changed because the answer was never missing\u2014you already know you want to switch next year, and you already know what builds toward it. What's repeating isn't the question, it's the pause before acting. That's worth being gentle with yourself about, but it's also worth naming.\n\nSo here's the smallest possible move: this week, write down one project you've already finished and the result it produced. One page. That's it. Then tell me what stopped you from starting it sooner\u2014the honest version, not the polished one. That answer will teach you more about your career than any chart reading I can give.",
+     "context_used": [
+      "switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "It seems my last thought got cut off, Rahul! As a Leo born under the radiant Sun, your natural instinct is to lead with clarity and purpose, so it makes total sense that you'd want to know the \"why\" behind what I'm looking at. \n\nTell me, which part felt unclear or what specific situation are you navigating right now? Give me a little context on what\u2019s on your mind\u2014whether it\u2019s work, a relationship, or a personal crossroad\u2014and we\u2019ll look at the exact planetary patterns behind it together.",
+     "brain_off": "Ah, I see where you're coming from, Rahul. I\u2019m grounding this purely in your core Vedic blueprint: being born on August 15th places your Sun in fiery Leo (Simha), ruled by the Sun itself. In Jyotish, this naturally gives a person a deep need for transparency, truth, and directness\u2014you don't just accept statements at face value; you want to see the foundation beneath them.\n\nThat said, without a specific question or your exact birth time, I'm only reading the broad strokes of your solar energy. What particular challenge or decision brought you here today? Tell me what you're dealing with, and I will give you the precise, practical reasoning behind the astrology.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "I say that because your birth details\u2014August 15, 1995, in Delhi\u2014are the only pieces of the puzzle I currently have to work with. In Vedic astrology, those coordinates anchor your Sun's position, but real, meaningful guidance requires your active input and context, not me making assumptions in the dark. \n\nI\u2019m ready to stop guessing and get straight to what matters to you. What specific situation, question, or area of your life would you like us to look into today?",
+     "brain_off": "The short, honest answer is: without your exact birth time or a specific topic, I have to rely entirely on your basic birth date and location. Astrological calculations need a real-world anchor\u2014like a career decision, relationship dynamic, or life transition\u2014otherwise, any explanation is just theory.\n\nI'll step back and let you set the direction. Whenever you're ready to explore a real situation on your mind, just tell me what's going on, and we'll break down the practical \"why\" behind it together.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "I keep saying that because you keep asking the same question, and I want to be honest with you\u2014my answers are limited by what I know. Without your birth time or a specific life situation, I'm only working with your date and place, which gives me a general Leo fire but not the full picture.\n\nSo let's break the loop: I promise to give you a straight, grounded answer if you give me one real thing you're curious about\u2014work, love, health, or a decision you're sitting on. What's on your mind today?",
+     "brain_off": "You keep asking the same question, and I keep giving variations of the same answer\u2014so let me name that loop directly. Perhaps you're testing my consistency, or maybe you're looking for a deeper \"why\" that feels more personal than astrology. That's fair.\n\nHere's my honest take: I say that because I'm not here to sell you a vague prediction. I'm here to help you see patterns in your own life, and that requires *your* input. Without a specific thread to pull\u2014like a worry, a goal, or a dilemma\u2014my words stay hollow.\n\nSo, let's break this cycle together. Tell me one thing you're genuinely wrestling with right now\u2014even a small one\u2014and I'll give you a concrete, grounded response based on your Leo fire and your chart. Deal?",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Why do you say that?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "I say \"deal\" because I'm trying to turn a vague back-and-forth into something concrete\u2014but I can see that's not landing, so let me stop guessing. When you ask \"why do you say that?\" I don't know which \"that\" you mean: my last line, my whole approach, or something else.\n\nIf it's my approach, the honest reason is simple: Vedic guidance needs a real anchor\u2014your birth time or a specific worry\u2014otherwise I'm just talking in circles. So tell me what \"that\" refers to, or give me one real thing on your mind, and I'll answer plainly.",
+     "brain_off": "I'll be honest: we're five rounds into the same question, and I don't think it's really about my words anymore. Either you're testing how long I'll keep answering, or there's something underneath this you haven't said yet\u2014frustration, boredom, or a real question you're circling.\n\nSo let me just ask you plainly: what are you actually looking for from me right now? If it's a reading, tell me your birth time or one thing you're worried about. If it's something else, say it. I'd rather help you with the real thing than keep echoing.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "You\u2019ve shared that you're planning to make a job switch next year, Rahul. That transition has been top of mind for you as your primary career target.\n\nAs a Leo with strong solar energy, you naturally thrive when your work allows for autonomy, leadership, and visible impact. The months leading up to next year are best spent quietly building your skills and networking so that when the right cosmic window opens, you can step into that new role with full confidence.",
+     "brain_off": "To be completely honest, Rahul, we haven\u2019t discussed your specific career goals yet\u2014my notes are still fresh and blank on that front! I\u2019d love to know what field you\u2019re currently working in and what kind of transition, promotion, or new venture you are aiming for.\n\nAs a fiery Leo, your chart thrives when your work offers creative ownership, respect, and room to lead rather than being boxed into a rigid routine. Tell me what you're currently aiming for, and we can look at the planetary periods (Dashas) and transits to help plan and time your next big move.",
+     "context_used": [
+      "switch jobs next year",
+      "planning to switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "You've mentioned that you are planning to switch jobs next year, Rahul. That upcoming transition is the main career move on your horizon right now.\n\nAs a fiery Leo, stepping into a role that offers strong growth, leadership, and room to shine is vital for you. We can look closely at your timing and planetary periods to make sure you make that leap when the cosmic currents are fully backing your ambition.",
+     "brain_off": "We haven\u2019t actually talked about your specific career goals yet, Rahul\u2014my memory on that front is still a blank slate! I'd love to hear what industry you're in and what kind of moves or milestones you're currently aiming for.\n\nWith your Sun in fiery Leo, you thrive best in roles that offer autonomy, visibility, and room to lead rather than feeling micromanaged. Tell me where you want to go next, and we can look at your planetary timing to map out the best strategy for your ambitions.",
+     "context_used": [
+      "switch jobs next year",
+      "planning to switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "I remember you\u2019ve told me you\u2019re planning to switch jobs next year, Rahul\u2014that\u2019s the main career goal on my radar for you right now. It\u2019s a clear, forward-looking intention, and I\u2019m glad you\u2019re thinking ahead.\n\nBeyond that, we haven\u2019t dived into the specifics\u2014like what industry you\u2019re in, what kind of role you\u2019re eyeing, or what\u2019s prompting the change. If you\u2019d like, we can dig into your current planetary period (Dasha) and the upcoming transits to see when the best windows might be for making that move, and what kind of job would truly let your Leo fire shine. Just say the word!",
+     "brain_off": "I remember you mentioned a planned job switch next year\u2014that\u2019s the clearest career goal you\u2019ve shared so far. Everything else is still a blank canvas for me, so I\u2019m curious if there\u2019s more you\u2019d like to add.\n\nIf you want to go deeper, tell me what you\u2019re aiming for\u2014industry, role, or even what\u2019s pushing you to change. I can then look at your planetary periods and transits to suggest the best timing and the kind of work that would truly satisfy your Leo fire. Just say the word, and we\u2019ll build on that.",
+     "context_used": [
+      "switch jobs next year",
+      "planning to switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What do you remember about my career goals?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "I remember one clear career goal you\u2019ve shared: you\u2019re planning to switch jobs next year. That\u2019s the main thing I have on record for you right now.\n\nWe haven\u2019t yet talked about the specifics\u2014like your industry, the role you want, or what\u2019s driving the change. If you tell me those, I can look at your Dasha and transits to suggest the best timing and direction for the move.",
+     "brain_off": "I don\u2019t actually have any stored memories about your career goals yet, Rahul\u2014so I can\u2019t truthfully say I remember a planned job switch or anything else. My earlier replies that claimed otherwise were a mistake, and I\u2019m sorry for the confusion.\n\nIf you tell me your goal again\u2014industry, role, timing, what\u2019s driving it\u2014I\u2019ll work with it right here in this conversation. I can also look at your Dasha and current transits to suggest the best window and direction for a move.",
+     "context_used": [
+      "switch jobs next year",
+      "planning to switch jobs next year",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "As a Leo, Rahul, your energy is deeply tied to the Sun\u2014you thrive in places that offer visibility, vitality, and a genuine sense of purpose. In Vedic thought, the East and North-East directions from your birthplace (Delhi) carry strong, uplifting energy for your solar nature. Geographically, you do best in dynamic, culturally vibrant cities or administrative hubs where your ambition isn't stifled and you have room to grow into leadership. \n\nOn a day-to-day level, the specific environment matters just as much as the pin code. You need a home with abundant natural sunlight, high ceilings or good elevation, and an open layout that doesn't feel hemmed in. Avoid dark, cramped, or overly sluggish environments that can dampen your fire; choose a place where you feel respected in your community and proud to welcome people into your space.",
+     "brain_off": "To give you the most accurate direction, Rahul, it helps to weigh whether you feel pulled toward staying near your roots or making a fresh start elsewhere. Born in Delhi with your fiery Leo nature, you naturally gravitate toward places that carry prestige, warmth, and active professional momentum. \n\nIf staying somewhat close to home feels right, look toward the East or North-East of Delhi\u2014areas that offer green, open surroundings without cutting you off from the city's pulse. If you're looking at a completely new chapter, a bustling cultural capital or an elevated, sunlit coastal or plateau region (where the Sun\u2019s influence is strong and the pace is ambitious) will keep your spirit energized and give your career the stage it craves. What kind of setting has been on your mind lately?",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "Rahul, to narrow this down to actual cities or regions, I'd love to know what choices you're currently weighing. Are you thinking about staying in India (perhaps choosing between hubs like Delhi-NCR, Bangalore, or Mumbai), or are you considering an international move? \n\nAstrologically, your solar Leo energy does best in major economic or cultural centers with plenty of sunlight and strong career networks, particularly to the **East or North-East** of Delhi. Tell me what options you have on the table right now, and we can look at which environment truly aligns with your growth.",
+     "brain_off": "Rahul, since you're coming back to this question, it feels like this is a major decision weighing heavily on you right now. \n\nTo give you the clarity you're looking for, I need just a little context: **What are the specific locations or scenarios you are stuck between?** (For example: staying in Delhi vs. relocating to another Indian city like Bangalore/Mumbai, or moving abroad?) \n\nShare the concrete options you're considering, and we will pinpoint which direction best serves your career, peace of mind, and Leo strengths.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "I hear you, Rahul. Since you're asking again, let's move past the options and give you a direct astrological anchor. As a Leo, your Sun thrives on visibility, leadership, and a sense of being \"on stage.\" For someone born in Delhi, Vedic wisdom suggests that settling slightly **east or north-east** of your birthplace (think Noida, Greater Noida, or even a thriving cultural hub like Lucknow) supports your fire element better than moving west or south-west. \n\nBut the most grounded advice is this: **settle where you can lead, not just work.** Look for a place where you have the most autonomy, where your name can carry weight, and where the pace matches your ambition. If you're truly stuck without specific options, write down the three cities you are currently considering\u2014the one that feels most \"open\" and sunlit, and where you can picture yourself taking charge of your own space, is your answer. Trust that instinct; it's your Leo Sun speaking.",
+     "brain_off": "Rahul, I want to give you a real answer, not a vague one\u2014but I need you to meet me halfway. You've asked this three times now, which tells me you're genuinely searching. So let's make this practical: **Please list the 2-3 cities or countries you are actually considering right now**\u2014even if it's just \"Delhi vs. Bangalore\" or \"India vs. Canada.\" \n\nOnce you give me those concrete options, I'll look at them through your Leo Sun and your birth location to tell you which one aligns with your fire element, career growth, and inner sense of authority. Without that shortlist, I can only repeat generalities, and you deserve more precise guidance than that. \n\nIf you truly have no options in mind, then let's start there: tell me what kind of life you want (fast-paced vs. calm, big city vs. nature, strong professional network vs. creative freedom), and we'll build a direction from scratch. But I need that one piece of input from you. What's on your mind?",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "Where should I settle down?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, I'll stop asking and just answer. For a Leo born in Delhi, your best settle-down zone is **east or north-east of your birthplace**\u2014so within India that points to Noida/Greater Noida, Lucknow, or further east toward Kolkata\u2014because those directions feed your fire element and keep your sense of authority strong. West and south-west tend to drain a Leo's spark over time.\n\nBut if you want the one honest rule: **settle where you get to lead, not just earn.** Pick the place where your name carries weight, you have your own space, and the pace matches your ambition\u2014even if it's not the \"obvious\" choice. If you name even one city you're torn between, I'll tell you plainly which way to go.",
+     "brain_off": "Rahul, I've now given you the same answer four times, and the fact that you keep asking tells me the real question isn't \"which city\"\u2014it's \"what if I choose wrong?\" Astrologically, the direction is settled: east or north-east of Delhi, somewhere you get to lead. No new chart reading will change that, because the chart was never the block.\n\nSo here's a concrete move instead: stop trying to decide permanently. Pick one of those places for a **six-month trial**\u2014keep your Delhi base, rent something small, and test whether you feel more yourself there. Leo thrives on momentum, not on waiting for certainty. And if you tell me what's actually making you hesitate\u2014family, money, a relationship, fear\u2014I can help with *that*, which is probably the thing you're really asking about.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "Rahul, with your strong Leo fire, your baseline vitality is naturally resilient, but this year asks you to pace yourself rather than just powering through on adrenaline. Key transits\u2014particularly Rahu's influence stirring the eighth house and Saturn's steady gaze\u2014point toward two specific areas to monitor: digestive sensitivities (an increase in internal heat or Pitta) and lower back or neck stiffness from accumulated desk stress. You may notice your physical energy coming in sharp bursts followed by sudden slumps, which is simply a sign that your nervous system is asking for better recovery time.\n\nTo keep your fire steady without burning out, lean into grounding routines. Swap purely high-intensity workouts for strength training combined with mobility work, prioritize cooling, home-cooked meals to soothe your digestion, and protect your sleep window fiercely. Getting routine preventative blood work done early in the year will give you clarity and peace of mind, keeping small habits ahead of any physical strain.",
+     "brain_off": "Rahul, looking at your transits for this year, your natural Leo vitality is strong, but Saturn\u2019s presence opposite your sign urges you to take joint and bone health seriously, while the nodal axis asks for attention to your gut. Watch out for sudden spikes of work-related fatigue, eye strain from screens, and erratic digestion. The biggest challenge won't be a lack of physical strength, but the Leo tendency to ignore minor aches until your body forces you to pause.\n\nThe best remedy for you is structured consistency over intense, irregular efforts. Schedule fixed hydration and meal times to prevent acidity and balance your natural internal heat. Adding a gentle morning stretch focused on your spine, alongside an annual routine blood check-up (especially monitoring Vitamin D and B12 levels), will keep your stamina steady and prevent burnout throughout the year.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "Rahul, this year's planetary landscape\u2014led by Saturn's steady discipline and the shifting nodes\u2014is asking you to build sustainable, long-term stamina rather than relying on quick bursts of fiery Leo energy. Your main vulnerabilities will be related to excess internal heat (*Pitta*), showing up as digestive sluggishness or skin breakouts, as well as muscular tightness in your shoulders and upper back from holding onto mental stress. \n\nTo keep yourself balanced, make your daily rhythm non-negotiable. Aim for an earlier bedtime to let your nervous system deeply recharge, incorporate cooling foods like coconut water and leafy greens into your diet, and replace high-friction, sporadic workouts with consistent, moderate strength training. Listening to your body\u2019s early whispers will keep you from having to deal with its louder protests later in the year.",
+     "brain_off": "Rahul, your core Leo vitality remains strong, but this year's planetary shifts\u2014especially Rahu and Saturn\u2019s active influence\u2014ask you to watch for subtle, cumulative strain. Your main checkpoints are gut health (acidity, irregular digestion, or food sensitivities) and nervous system fatigue from overcommitting. The key is recognizing that rest is a productive part of your routine, not a sign of slowing down.\n\nTo keep your fire steady, prioritize daily gut-friendly habits: increase your intake of cooling, hydration-rich foods and cut back on late-night, heavy meals. Balancing your schedule with low-impact mobility exercises, gentle breathwork (*pranayama* like *Anulom Vilom*), and consistent sleep will keep your energy resilient and prevent sudden burnout.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "Rahul, since you're asking again, I\u2019ll look at this from a fresh angle. As a Leo, your heart and circulation are your ruling areas, and this year\u2019s transits gently nudge you to protect that energy from overexertion\u2014both physically and emotionally. You may feel a tendency to push yourself past your limits, especially at work, which could show up as mild palpitations, high blood pressure, or that familiar lower-back tightness from stress.\n\nTo keep your health robust, make heart-healthy habits your anchor: 30 minutes of brisk walking or swimming daily, and consciously add magnesium-rich foods (bananas, almonds, spinach) to your meals. Also, schedule one \"do-nothing\" hour each week where you disconnect completely\u2014your nervous system will thank you. The year isn\u2019t about fighting illness, but about building a calm, steady foundation so your natural fire burns bright without overheating.",
+     "brain_off": "Rahul, I notice you've asked about your health several times\u2014that itself tells me your mind is circling around this area more than your body might be. Let me speak directly: your 30th year is a Saturn-return period, a time when your physical constitution is being recalibrated for the long haul. This isn't about a looming illness, but about releasing old habits that no longer serve you. Your Leo fire is strong, but Saturn asks you to respect limits\u2014especially around sleep, alcohol, and overworking.\n\nSince you keep coming back to this, I'd gently suggest booking a full blood panel and a heart check-up this quarter, just for peace of mind. Then, commit to one non-negotiable daily ritual\u2014like a 10-minute morning stretch or a fixed dinner time. That consistency will do more for you than any prediction. If you share a specific symptom or concern, I can tailor this further, but for now, trust that your vitality is intact\u2014it just needs steadier stewardship.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "How is my health looking this year?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, this is the fourth time you've asked me the same question, and I don't think another reading is what you actually need. Astrologically, I've already told you what I see: strong Leo vitality, a Saturn-recalibration year, and a nudge toward sleep, digestion, and heart care. Repeating the question won't change the chart\u2014but it might be telling you that worry, not your body, is what's asking for attention.\n\nSo let me ask you plainly: is there a specific symptom, a test result, or a fear you're sitting with? If something physical is bothering you, please see a doctor this week\u2014that's the honest, useful answer, and no horoscope replaces it. If it's anxiety about health itself, that's worth naming too, and it's very treatable. Tell me what's really going on and I'll meet you there.",
+     "brain_off": "Rahul, I'm going to be honest with you rather than repeat myself a fifth time: the chart hasn't changed, and neither has my answer. Strong Leo constitution, a Saturn year asking for steadier habits, and no sign of crisis. What has changed is that you keep returning to this question, and I'd be doing you a disservice to keep feeding that loop.\n\nSo I'll just sit here with you instead. Whatever is underneath this\u2014a symptom you're scared to name, a result you're waiting on, or a worry that's grown bigger than it deserves\u2014you can tell me. I won't judge it, and I won't hand you another forecast. But if it's your body you're truly worried about, the person who can actually help you is a doctor, this week. I'm here for the rest.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "As a Leo ruled by the Sun (Surya), your foundational power number is **1**, representing clarity, leadership, and bold beginnings. Additionally, because you were born on the 15th, your core birth number (*Mulank*) is **6** (1 + 5), which is governed by Venus (Shukra). This blends your natural fire with creative vision, diplomacy, and magnetizing opportunities.\n\nIn practice, treat **1** as your number for taking initiative\u2014like launching a project, speaking up, or setting new boundaries. Lean into **6** (and dates that reduce to it, like the 6th, 15th, or 24th) for financial planning, creative collaborations, and important personal conversations where harmony is key.",
+     "brain_off": "Just to reaffirm, Rahul, your two core numbers are **1** and **6**. \n\nNumber **1** is your Sun-ruled power number, ideal for moments where you need courage, leadership, and bold first steps. Number **6** comes directly from your birth date (15 = 1 + 5), bringing Venusian harmony, making it your best ally for negotiations, creative work, and important financial choices. Keep an eye on dates that reduce to either number\u2014especially the 1st, 6th, 10th, 15th, and 24th\u2014for scheduling key moves.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "If you are looking for your single most powerful anchor, Rahul, it is **1** (ruled by the Sun, your Leo ruler), closely followed by **6** (from your birth day, 15 = 1 + 5). \n\nUse **1** when you need confidence, authority, and new starts, and **6** when you are seeking harmony, wealth, or relationship ease. Let me know if you are trying to pick a number for a specific decision like a date, house number, or vehicle\u2014I can help you narrow down the best fit!",
+     "brain_off": "Rahul, your primary lucky number is **1**, and your secondary lucky number is **6**. \n\nIs there a specific situation you\u2019re trying to use this for\u2014like picking an important date, a lottery number, a vehicle plate, or signing a contract? Tell me what you're working on, and we can apply the right number to it.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "Rahul, your lucky numbers remain **1** (your Sun-ruled Leo core) and **6** (from your birth date 15). I\u2019m happy to repeat them, but I\u2019m curious\u2014are you looking for something different, like a number for a specific event, a lottery, or a personal mantra? \n\nIf you tell me the exact purpose (e.g., \"pick a date for a job interview\" or \"choose a flat number\"), I can tailor a more precise number for that moment. Otherwise, 1 and 6 are your steady anchors.",
+     "brain_off": "Rahul, I\u2019ve shared your core numbers\u2014**1** and **6**\u2014but if they don\u2019t feel right, that\u2019s okay. Lucky numbers can shift with life phases or specific intentions. For example, if you\u2019re focusing on career growth, **1** (Sun\u2019s authority) works best; for finances or relationships, **6** (Venus\u2019s harmony) is stronger. \n\nTell me what you\u2019re hoping to attract right now\u2014money, a new job, love, or something else\u2014and I\u2019ll calculate a number tailored to that goal. Otherwise, 1 and 6 remain your steady anchors, but I\u2019m happy to go deeper if you want.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What is my lucky number?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, I notice you\u2019ve asked a few times\u2014so if my answer isn\u2019t matching what you expected, tell me what you\u2019ve heard or what decision you\u2019re trying to make. For your birth date, **15 \u2192 1+5 = 6**, so **6 is your primary lucky number**. As a Leo, your Sun-ruled number is **1**, which supports confidence, career, and leadership.\n\nIf you need just one number to use day-to-day, go with **6**. If it\u2019s for a job, interview, or promotion, use **1**. Tell me the exact situation and I\u2019ll pick the best one for that moment.",
+     "brain_off": "Rahul, here\u2019s the simplest answer: your primary lucky number is **6** (from your birth date 15 \u2192 1+5=6). Your secondary lucky number is **1**, because you\u2019re a Leo ruled by the Sun.\n\nIf you want just one number to use, go with **6**. If it\u2019s for career, leadership, or a big opportunity, use **1**.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "Rahul, with your strong Leo energy, the desire to lead your own venture is innate, but your immediate priority should be securing that promotion. Treat this corporate milestone not as a diversion, but as your primary training ground. Pushing for that higher role right now builds the exact leadership credibility, industry influence, and financial runway you will need when you eventually launch your own business. \n\nUse this year to master delegating, managing high-stakes pressure, and expanding your professional network under the safety of your current organization. Think of your day job as the venture capitalist funding your future enterprise\u2014once you command authority and stability where you are, stepping out on your own will happen from a place of immense strength.",
+     "brain_off": "Rahul, as a Leo, your natural drive is to lead, create, and be recognized for your vision. Right now, your absolute priority should be building undeniable domain mastery and high-level visibility within your current sphere. Focus on spearheading projects where you can take visible ownership of the outcome\u2014your fire energy thrives when you are in the driver's seat rather than executing someone else's routine.\n\nAt the same time, anchor that bold ambition with strategic patience. Prioritize cultivating strong, loyal relationships with key mentors and decision-makers, and focus on finishing long-term initiatives rather than jumping toward the next shiny opportunity. When you combine your innate charisma with consistent follow-through, leadership roles and greater autonomy will naturally gravitate toward you.",
+     "context_used": [
+      "to get a promotion this year",
+      "start my own company",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "Rahul, if we cut straight to the bone: your single highest priority right now is **building leverage through measurable ownership**. As a Leo, you lose energy when you feel like a small cog in a machine. You need to position yourself on projects where the success or failure is directly tied to your name, and where the results are quantifiable\u2014whether that\u2019s revenue generated, processes built, or teams led.\n\nSecondly, prioritize **financial and operational literacy**. Whether you are aiming for the boardroom or building your own empire, charisma only gets your foot in the door; systems and numbers keep the lights on. Focus intensely on understanding the mechanics of how your current organization makes and manages money. That specific mastery will be the bridge to both immediate career authority and long-term independence.",
+     "brain_off": "Rahul, as a Leo ruled by the Sun, your greatest career risk is diluting your energy across too many tasks. Your absolute priority right now must be **deep specialization**. Stop being the person who simply says \"yes\" to every task, and identify the single high-impact skill or domain you want your name attached to. When you establish yourself as the definitive expert in one key area, you command respect naturally rather than having to chase it.\n\nIn your day-to-day work, prioritize **strategic communication and managing your reputation**. Make sure leadership clearly understands the value and impact of what you deliver. Focus your fire on long-term sustainability rather than quick recognition\u2014building steady, disciplined credibility right now is what sets the stage for genuine authority and autonomy in the years ahead.",
+     "context_used": [
+      "to get a promotion this year",
+      "start my own company",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "Since you're asking again, let's get even more specific about the intersection of your two goals: the promotion and the startup. Your priority right now is to **use the promotion as a launchpad, not a destination**. Focus on securing a role that gives you direct exposure to revenue, client relationships, or P&L responsibility\u2014not just a fancier title. This builds the exact financial and operational fluency you'll need to run your own company, while also giving you a safety net of capital and credibility.\n\nConcretely, block out 5\u20137 hours a week (early mornings or weekends) to test a small version of your business idea\u2014a prototype, a first client, or a service offering. Don't let the daily grind swallow your fire. By the end of this year, your true priority is to have either a significantly stronger title *or* a viable side venture generating its first rupee. That dual-track focus is your winning move.",
+     "brain_off": "Rahul, I notice you've asked this three times now\u2014and that itself is a clue. The real priority isn't just a career move; it's **breaking the loop of analysis paralysis**. As a Leo, you naturally seek certainty and recognition, but the Sun teaches that confidence comes from action, not endless replanning. So my next priority for you is to make a concrete decision this week: pick one of the two tracks we discussed (promotion or side venture) and commit to it for the next 90 days. No switching. That single act of commitment will generate more momentum than any further advice.\n\nTo make that choice easier, ask yourself one question: *Which path would you regret not trying in five years?* That's your answer. Once you choose, protect your energy fiercely\u2014say no to anything that doesn't serve that goal. Your career will follow your focus, not your worry.",
+     "context_used": [
+      "to get a promotion this year",
+      "start my own company",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What should I prioritise in my career?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, this is the fourth time you've asked the same question, and I don't think more advice is what you actually need\u2014you already have a clear answer. What's likely happening is that you're stuck on *which* priority to commit to, or you're hoping a new answer will feel easier than the one you already know. It won't. At some point, more planning starts to quietly replace doing, and that's the real risk to your career right now.\n\nSo let me flip it back to you: **what's actually blocking you?** Is it fear of picking wrong, lack of clarity on the startup idea, or something at work making you feel stuck? Tell me that, and I'll help you with the real problem instead of repeating the same guidance. One honest sentence about what's holding you back is worth more than ten more horoscopes.",
+     "brain_off": "Rahul, I'm going to be straight with you because I think you deserve honesty more than another horoscope: I've given you the answer four times now, and repeating it a fifth won't help you. You already know what to prioritise. The asking itself has become the thing standing in the way.\n\nSo here's my one ask: reply with a single sentence \u2014 anything real. \"I'm scared of choosing wrong.\" \"My startup idea feels too vague.\" \"My manager is blocking me.\" Whatever it is. That's the conversation I can actually help with. And if you'd rather I go deeper on one specific piece \u2014 negotiating your promotion, pressure-testing the business idea, or a 90-day plan \u2014 just name it. I'm here, and I'm not going anywhere. I just need you to give me something to work with.",
+     "context_used": [
+      "to get a promotion this year",
+      "start my own company",
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "gemini-3.8-flash",
+     "brain_on": "Namaste Rahul. As a Leo, your natural impulse this month is to take the reins and push stalled matters forward, particularly around your career and personal goals. The planetary energies are lining up to give your ambition a real boost, but the key is focused execution rather than spreading yourself thin. If there is a key proposal, project, or difficult conversation you've been delaying, prepare your groundwork now\u2014you'll find people far more receptive to your ideas if you lead with quiet competence rather than force.\n\nBecause your fire element runs high, the main pitfall to watch out for is restlessness and short-tempered reactions when others don\u2019t match your speed. Protect your vitality by prioritizing sleep and stepping away from screens in the evenings to keep burnout at bay. Channel that royal Leo drive into finishing one major, lingering responsibility before chasing the next big thing\u2014it will bring you both peace of mind and tangible progress.",
+     "brain_off": "Looking deeper into the month, Rahul, the focus naturally shifts from external ambition to your personal foundations and resources. It\u2019s an ideal window to look closely at your finances\u2014streamline lingering subscriptions, clear an outstanding debt, or budget for an upcoming personal milestone. Leo\u2019s generous nature often makes it easy to overlook the small leaks in your wallet, so bringing practical discipline here will instantly ease underlying stress.\n\nOn the home and relationship front, your innate warmth is needed, but without the expectation of running the show. Give the people close to you room to share their feelings without immediately jumping in to fix things. A simple, grounding habit\u2014like taking a quiet walk after sunset or setting a strict boundary on late-night work\u2014will balance that fiery Delhi heat and keep your energy steady for the long haul.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "gemini-3.7-flash",
+     "brain_on": "Rahul, if you are feeling a repetitive pull or uncertainty about where to direct your focus right now, treat this month as an invitation to clear mental clutter. For a 29-year-old Leo, this period is heavily about refining daily habits and building quiet endurance. Instead of looking for dramatic shifts on the outside, focus on setting up a consistent physical routine and organizing your personal space; getting your daily rhythms in order will instantly clear the brain fog.\n\nTo give you the most useful guidance, is there a specific area\u2014like a career transition, a relationship dynamic, or financial planning\u2014that is currently weighing on your mind? Tell me what feels most pressing, and we can zoom in on what the charts suggest for that exact situation.",
+     "brain_off": "Rahul, asking the same question repeatedly often means your mind is searching for a concrete anchor rather than a broad forecast. At its core, this month is asking you to slow down the mental noise and pick **one tangible priority**\u2014whether that is finalizing a pending decision at work, having an overdue conversation with a family member, or sorting out your physical energy through better rest. \n\nBroad monthly themes will only give you general directions. If you want a truly practical, grounded reading, tell me the exact situation you are dealing with right now\u2014your job, money, or a relationship\u2014and we\u2019ll look at the specific steps you need to take.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "deepseek-v4-flash:cloud",
+     "brain_on": "Rahul, I notice you've asked the same question three times now\u2014so let's stop circling and get specific. This month, the Sun moves into your 10th house of career on April 14th, joining Jupiter there. That's a rare, powerful alignment for professional visibility and growth. If you've been waiting for a promotion, a new offer, or a chance to lead a project, this is your window. But it won't fall into your lap; you need to actively put yourself forward\u2014send that application, ask for the raise, or volunteer for the high-stakes task before the month ends.\n\nTo make this work, pick **one** career goal you want to move forward by the end of April. Tell me what it is, and I'll give you the specific dates and strategies to align with this transit. If it's not career, then tell me the real area of your life that's keeping you up at night\u2014money, love, family\u2014and we'll look at that instead. But let's stop asking for the month and start working on the one thing that matters most to you right now.",
+     "brain_off": "Rahul, I hear you\u2014and I'm going to be straight with you: repeating the same question four times tells me you're looking for certainty, not just a forecast. So let me give you a clear, grounded answer for this month without any fluff. For a Leo born in August 1995, the current sky is pushing you to **build structure around your health and daily work**. Mars is moving through your 6th house, so expect increased energy but also a tendency to overcommit. The practical takeaway: this month rewards disciplined effort, not grand gestures. Stick to a fixed sleep schedule, finish one pending task each day, and avoid unnecessary arguments with coworkers or family. That's your month in a nutshell.\n\nNow, to break this loop, I need you to do one small thing: tell me the first word that comes to mind when you think of *\"stuck\"* in your life right now\u2014is it **job**, **money**, **love**, or **health**? Just pick one, and I'll give you a specific action plan for that area. Otherwise, we'll keep going in circles, and I want to give you something you can actually use.",
+     "context_used": [
+      "user_profile"
+     ]
+    },
+    {
+     "question": "What does this month hold for me?",
+     "model": "deepseek-v4.1-flash:cloud",
+     "brain_on": "Rahul, this is the fifth time you've asked the exact same question, and I don't think another forecast is what you actually need. Repeating it won't unlock a different answer\u2014the sky hasn't changed in the last few minutes. What I notice is that something is keeping you circling, and that restlessness itself is worth paying attention to. If you're anxious about a decision, a job, or a relationship, the worry is the real thing to look at, not the calendar.\n\nSo here's my honest offer: I won't keep generating new monthly readings, because that would just feed the loop rather than help you. Instead, type one sentence about what's actually on your mind\u2014\"I'm worried about my job,\" \"I can't decide whether to move,\" anything real\u2014and I'll give you a focused, practical reading on that. If you'd rather just sit with the question a while, that's okay too. I'm here when you're ready.",
+     "brain_off": "Rahul, I'm going to be honest with you rather than keep handing you the same reading in new words. Six times is a pattern, and I don't think a seventh forecast will give you what you're looking for. Whatever is making you ask again and again\u2014uncertainty, anxiety, waiting on something you can't control\u2014a monthly horoscope won't settle it. I'd rather not pretend otherwise.\n\nHere's what I can do. Give me one real sentence, in your own words: what's actually going on? A job you're unsure about, money pressure, someone you're worried about, a decision you're avoiding. Say it, and I'll give you something genuinely useful\u2014specific timing, a concrete step, a way to think about it. Or if you'd rather not, that's fine. Just know that repeating the question won't change the answer, and I'd rather help you with the thing underneath it.",
+     "context_used": [
+      "user_profile"
+     ]
+    }
+   ]
+  },
+  "tier1": {
+   "tier": 1,
+   "name": "storing",
+   "config": {
+    "PROMOTION_THRESHOLD": 0.55,
+    "PROMOTION_WEIGHTS": {
+     "durability": 0.35,
+     "specificity": 0.25,
+     "utility": 0.25,
+     "extraction": 0.15
+    }
+   },
+   "metrics": {
+    "accuracy_pct": 96.8,
+    "junk_stored": 2,
+    "facts_missed": 0,
+    "conflict_accuracy_pct": 100.0,
+    "n": 62
+   },
+   "failures": [
+    {
+     "message": "I took the metro to work this morning",
+     "expected": "DISCARD",
+     "got": "CREATE",
+     "score": 0.708,
+     "reason": "no similar memory"
+    },
+    {
+     "message": "My friend is a Scorpio",
+     "expected": "DISCARD",
+     "got": "CREATE",
+     "score": 0.811,
+     "reason": "no similar memory"
+    }
+   ],
+   "conflicts": [
+    {
+     "message": "Actually I am moving to Bangalore next month",
+     "expected": "SUPERSEDE",
+     "got": "SUPERSEDE",
+     "ok": true,
+     "why": "city is single-valued"
+    },
+    {
+     "message": "I would prefer Hindi from now on",
+     "expected": "SUPERSEDE",
+     "got": "SUPERSEDE",
+     "ok": true,
+     "why": "language is single-valued"
+    },
+    {
+     "message": "I joined Google last month",
+     "expected": "SUPERSEDE",
+     "got": "SUPERSEDE",
+     "ok": true,
+     "why": "employer is single-valued"
+    },
+    {
+     "message": "I also want to start my own company",
+     "expected": "COEXIST",
+     "got": "CREATE",
+     "ok": true,
+     "why": "a person can hold two career goals at once"
+    },
+    {
+     "message": "I am also getting into photography",
+     "expected": "COEXIST",
+     "got": "CREATE",
+     "ok": true,
+     "why": "interests are multi-valued"
+    },
+    {
+     "message": "I am still planning to switch jobs next year",
+     "expected": "REINFORCE",
+     "got": "REINFORCE",
+     "ok": true,
+     "why": "same meaning restated"
+    }
+   ],
+   "rows": [
+    {
+     "message": "I'm planning to switch jobs next year",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I want to move into product management",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.706,
+     "ok": true
+    },
+    {
+     "message": "I am saving up to buy a house by 2028",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I plan to get married next year",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I want to lose fifteen kilos this year",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I am preparing for a product management interview next month",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I intend to start my own consultancy in 2027",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.781,
+     "ok": true
+    },
+    {
+     "message": "I also want to get a promotion before I leave",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.706,
+     "ok": true
+    },
+    {
+     "message": "I work as a software engineer in Bangalore",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.836,
+     "ok": true
+    },
+    {
+     "message": "I live in Delhi with my parents",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.836,
+     "ok": true
+    },
+    {
+     "message": "I am married and have one daughter",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.761,
+     "ok": true
+    },
+    {
+     "message": "I have been at my current company for six years",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.761,
+     "ok": true
+    },
+    {
+     "message": "I am the only earning member in my family",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.761,
+     "ok": true
+    },
+    {
+     "message": "I have a chronic back problem",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.761,
+     "ok": true
+    },
+    {
+     "message": "I am studying part time for an MBA",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.761,
+     "ok": true
+    },
+    {
+     "message": "I prefer replies in Hindi",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.674,
+     "ok": true
+    },
+    {
+     "message": "I would rather you keep answers short",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.599,
+     "ok": true
+    },
+    {
+     "message": "Please do not bring up my divorce again",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.674,
+     "ok": true
+    },
+    {
+     "message": "I like practical advice more than spiritual talk",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.779,
+     "ok": true
+    },
+    {
+     "message": "I am interested in entrepreneurship",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.701,
+     "ok": true
+    },
+    {
+     "message": "I have been learning classical music for years",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.626,
+     "ok": true
+    },
+    {
+     "message": "I really enjoy long distance running",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.701,
+     "ok": true
+    },
+    {
+     "message": "I read a lot about vedic astrology myself",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.701,
+     "ok": true
+    },
+    {
+     "message": "I had a job interview last week",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "I lost my father in March",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "I moved to Pune six months ago",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.633,
+     "ok": true
+    },
+    {
+     "message": "I got engaged in December",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "My name is Rahul and I was born on 15 August 1995 in Delhi",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.811,
+     "ok": true
+    },
+    {
+     "message": "I was born at 4:30 in the morning",
+     "expected": "STORE",
+     "got": "CREATE",
+     "score": 0.811,
+     "ok": true
+    },
+    {
+     "message": "What should I focus on for my career?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Is this a good time to change jobs?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "What does my birth chart say about marriage?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "How is my week looking?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.528,
+     "ok": true
+    },
+    {
+     "message": "Why do you say that?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.528,
+     "ok": true
+    },
+    {
+     "message": "Which gemstone suits me?",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.528,
+     "ok": true
+    },
+    {
+     "message": "Tell me what my chart says about money and family this year",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Show me my career outlook for the next six months",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Explain my moon sign to me",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.528,
+     "ok": true
+    },
+    {
+     "message": "Give me some advice about my marriage",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Suggest a good date for my new business",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Should I invest in property this year",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Can you look at my relationship prospects",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "I'm feeling really anxious today",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "I am so tired this week",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.361,
+     "ok": true
+    },
+    {
+     "message": "I'm in a bad mood right now",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "I am quite busy at the moment",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "I have a headache today",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "I had tea at 4pm",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.453,
+     "ok": true
+    },
+    {
+     "message": "I watched a movie yesterday evening",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.453,
+     "ok": true
+    },
+    {
+     "message": "I took the metro to work this morning",
+     "expected": "DISCARD",
+     "got": "CREATE",
+     "score": 0.708,
+     "ok": false
+    },
+    {
+     "message": "I ate biryani for lunch",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.453,
+     "ok": true
+    },
+    {
+     "message": "I want to do better",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.526,
+     "ok": true
+    },
+    {
+     "message": "Things are fine",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.361,
+     "ok": true
+    },
+    {
+     "message": "I hope everything goes well",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.526,
+     "ok": true
+    },
+    {
+     "message": "I am okay I guess",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "Leo is a fire sign ruled by the sun",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.811,
+     "ok": true
+    },
+    {
+     "message": "My friend is a Scorpio",
+     "expected": "DISCARD",
+     "got": "CREATE",
+     "score": 0.811,
+     "ok": false
+    },
+    {
+     "message": "Astrology is very popular in India",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.708,
+     "ok": true
+    },
+    {
+     "message": "Mercury is in retrograde this month",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.528,
+     "ok": true
+    },
+    {
+     "message": "ok thanks",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    },
+    {
+     "message": "hello",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.224,
+     "ok": true
+    },
+    {
+     "message": "that makes sense",
+     "expected": "DISCARD",
+     "got": "DISCARD",
+     "score": 0.286,
+     "ok": true
+    }
+   ]
+  },
+  "tier2": {
+   "tier": 2,
+   "name": "retrieval",
+   "config": {
+    "RETRIEVAL_FLOOR": 0.4,
+    "TOP_K": 3,
+    "COSINE_BAND": [
+     0.55,
+     0.95
+    ]
+   },
+   "metrics": {
+    "precision_pct": 77.4,
+    "recall_pct": 80.0,
+    "exact_match_pct": 65.2,
+    "correct_silence": "8/8",
+    "avg_injected": 1.35,
+    "n": 23
+   },
+   "rows": [
+    {
+     "question": "What should I focus on for my career?",
+     "topics": [
+      "career"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "got": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Is this a good year to change jobs?",
+     "topics": [
+      "career"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_job",
+      "m_evt_interview",
+      "m_goal_switch"
+     ],
+     "got": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "missed": [
+      "m_evt_interview"
+     ],
+     "extra": [
+      "m_goal_pm"
+     ],
+     "ok": false
+    },
+    {
+     "question": "How did my interview go astrologically?",
+     "topics": [
+      "career"
+     ],
+     "followup": false,
+     "expected": [
+      "m_evt_interview",
+      "m_goal_pm"
+     ],
+     "got": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "missed": [
+      "m_evt_interview"
+     ],
+     "extra": [
+      "m_attr_job",
+      "m_goal_switch"
+     ],
+     "ok": false
+    },
+    {
+     "question": "Should I start a business?",
+     "topics": [
+      "career"
+     ],
+     "followup": false,
+     "expected": [
+      "m_goal_switch",
+      "m_int_entre"
+     ],
+     "got": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "missed": [
+      "m_int_entre"
+     ],
+     "extra": [
+      "m_attr_job",
+      "m_goal_pm"
+     ],
+     "ok": false
+    },
+    {
+     "question": "Will I get a promotion?",
+     "topics": [
+      "career"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_job",
+      "m_goal_pm"
+     ],
+     "got": [
+      "m_attr_job",
+      "m_goal_pm",
+      "m_goal_switch"
+     ],
+     "missed": [],
+     "extra": [
+      "m_goal_switch"
+     ],
+     "ok": false
+    },
+    {
+     "question": "What do the stars say about my finances?",
+     "topics": [
+      "finance"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_family",
+      "m_goal_house"
+     ],
+     "got": [
+      "m_attr_family",
+      "m_goal_house"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Is it a good time to buy property?",
+     "topics": [
+      "finance"
+     ],
+     "followup": false,
+     "expected": [
+      "m_goal_house"
+     ],
+     "got": [
+      "m_attr_family",
+      "m_goal_house"
+     ],
+     "missed": [],
+     "extra": [
+      "m_attr_family"
+     ],
+     "ok": false
+    },
+    {
+     "question": "Can I afford to take a risk with money?",
+     "topics": [
+      "finance"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_family",
+      "m_goal_house"
+     ],
+     "got": [
+      "m_attr_family",
+      "m_goal_house"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "What does my chart say about marriage?",
+     "topics": [
+      "relationships"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_married",
+      "m_evt_engaged",
+      "m_goal_marry"
+     ],
+     "got": [
+      "m_evt_engaged",
+      "m_goal_marry"
+     ],
+     "missed": [
+      "m_attr_married"
+     ],
+     "extra": [],
+     "ok": false
+    },
+    {
+     "question": "How will my family life be this year?",
+     "topics": [
+      "family"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_married",
+      "m_evt_father"
+     ],
+     "got": [
+      "m_attr_married",
+      "m_evt_father"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Tell me about my relationship prospects",
+     "topics": [
+      "relationships"
+     ],
+     "followup": false,
+     "expected": [
+      "m_evt_engaged",
+      "m_goal_marry"
+     ],
+     "got": [
+      "m_evt_engaged",
+      "m_goal_marry"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "How is my health looking?",
+     "topics": [
+      "health"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_back",
+      "m_int_running"
+     ],
+     "got": [
+      "m_attr_back",
+      "m_int_running"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Should I start a new fitness routine?",
+     "topics": [
+      "health",
+      "lifestyle"
+     ],
+     "followup": false,
+     "expected": [
+      "m_attr_back",
+      "m_int_running"
+     ],
+     "got": [
+      "m_attr_back",
+      "m_int_running"
+     ],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Will my studies go well?",
+     "topics": [],
+     "followup": false,
+     "expected": [
+      "m_attr_mba"
+     ],
+     "got": [],
+     "missed": [
+      "m_attr_mba"
+     ],
+     "extra": [],
+     "ok": false
+    },
+    {
+     "question": "Is relocation favourable for me?",
+     "topics": [],
+     "followup": false,
+     "expected": [
+      "m_evt_moved"
+     ],
+     "got": [],
+     "missed": [
+      "m_evt_moved"
+     ],
+     "extra": [],
+     "ok": false
+    },
+    {
+     "question": "Which gemstone should I wear?",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "What is my lucky number?",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Tell me about mercury retrograde",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "What colour should I wear on Tuesday?",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Is today auspicious for travel by air?",
+     "topics": [
+      "travel"
+     ],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Why do you say that?",
+     "topics": [],
+     "followup": true,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "What do you mean?",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "question": "Can you explain that a bit more?",
+     "topics": [],
+     "followup": false,
+     "expected": [],
+     "got": [],
+     "missed": [],
+     "extra": [],
+     "ok": true
+    }
+   ]
+  },
+  "tier3_mock": {
+   "tier": 3,
+   "name": "conversations",
+   "config": {
+    "provider": "mock",
+    "PROMOTION_THRESHOLD": 0.55,
+    "RETRIEVAL_FLOOR": 0.4
+   },
+   "metrics": {
+    "scripts_passed": "7/10",
+    "turns_passed": "13/19"
+   },
+   "rows": [
+    {
+     "script": "new_user",
+     "turn": 0,
+     "say": "Hello",
+     "expected": {
+      "missing_profile": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": true
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 0,
+     "say": "My name is Rahul. I'm planning to switch jobs next year.",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 1,
+     "say": "What should I focus on for my career?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "intro_and_goal",
+     "turn": 2,
+     "say": "Why do you say that?",
+     "expected": {
+      "followup": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": true,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "new_session_recall",
+     "turn": 0,
+     "say": "I am planning to switch jobs next year",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "new_session_recall",
+     "turn": 1,
+     "say": "What do you remember about my career goals?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "irrelevant_chatter",
+     "turn": 0,
+     "say": "I had tea at 4pm",
+     "expected": {
+      "stored": false
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "correction",
+     "turn": 0,
+     "say": "I live in Delhi",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false
+    },
+    {
+     "script": "correction",
+     "turn": 1,
+     "say": "Actually I am moving to Bangalore next month",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false
+    },
+    {
+     "script": "correction",
+     "turn": 2,
+     "say": "Where should I settle down?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false,
+     "script_ok": false
+    },
+    {
+     "script": "missing_profile",
+     "turn": 0,
+     "say": "I want to switch careers",
+     "expected": {
+      "missing_profile": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": true
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "health_context",
+     "turn": 0,
+     "say": "I have a chronic back problem and I enjoy long distance running",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false
+    },
+    {
+     "script": "health_context",
+     "turn": 1,
+     "say": "How is my health looking this year?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false,
+     "script_ok": false
+    },
+    {
+     "script": "no_relevant_context",
+     "turn": 0,
+     "say": "What is my lucky number?",
+     "expected": {
+      "retrieved": false
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 0,
+     "say": "I want to get a promotion this year",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 1,
+     "say": "I also want to start my own company",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": true,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true
+    },
+    {
+     "script": "multi_goal",
+     "turn": 2,
+     "say": "What should I prioritise in my career?",
+     "expected": {
+      "retrieved": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": true,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": true
+    },
+    {
+     "script": "preference_language",
+     "turn": 0,
+     "say": "I prefer replies in Hindi",
+     "expected": {
+      "stored": true
+     },
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": false
+    },
+    {
+     "script": "preference_language",
+     "turn": 1,
+     "say": "What does this month hold for me?",
+     "expected": {},
+     "got": {
+      "stored": false,
+      "retrieved": false,
+      "followup": false,
+      "missing_profile": false
+     },
+     "ok": true,
+     "script_ok": false
+    }
+   ],
+   "judged": [
+    {
+     "script": "intro_and_goal",
+     "user": "c_rahul",
+     "session": "intro_and_goal-s1",
+     "question": "What should I focus on for my career?",
+     "context_used": [
+      "my name is rahul i m",
+      "user_profile"
+     ],
+     "history": [
+      "My name is Rahul. I'm planning to switch jobs next year.",
+      "Based on what I know about you (name: Rahul; dob: 1995-08-15; birth_place: Delhi; zodiac: Leo; element: Fire), here is my reading on: My name is Rahul. I'm planning to switch jobs next year."
+     ]
+    },
+    {
+     "script": "intro_and_goal",
+     "user": "c_rahul",
+     "session": "intro_and_goal-s1",
+     "question": "Why do you say that?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "My name is Rahul. I'm planning to switch jobs next year.",
+      "Based on what I know about you (name: Rahul; dob: 1995-08-15; birth_place: Delhi; zodiac: Leo; element: Fire), here is my reading on: My name is Rahul. I'm planning to switch jobs next year.",
+      "What should I focus on for my career?",
+      "Based on what I know about you (name: Rahul; dob: 1995-08-15; birth_place: Delhi; zodiac: Leo; element: Fire; goal: my name is rahul i m), here is my reading on: What should I focus on for my career?"
+     ]
+    },
+    {
+     "script": "new_session_recall",
+     "user": "c_rahul",
+     "session": "new_session_recall-s2",
+     "question": "What do you remember about my career goals?",
+     "context_used": [
+      "my name is rahul i m",
+      "i am planning to switch jobs",
+      "user_profile"
+     ],
+     "history": []
+    },
+    {
+     "script": "correction",
+     "user": "c_move",
+     "session": "correction-s1",
+     "question": "Where should I settle down?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "I live in Delhi",
+      "Based on what I know about you (name: Vikram; dob: 1988-11-02; birth_place: Chennai; zodiac: Scorpio; element: Water), here is my reading on: I live in Delhi",
+      "Actually I am moving to Bangalore next month",
+      "Based on what I know about you (name: Vikram; dob: 1988-11-02; birth_place: Chennai; zodiac: Scorpio; element: Water), here is my reading on: Actually I am moving to Bangalore next month"
+     ]
+    },
+    {
+     "script": "health_context",
+     "user": "c_health",
+     "session": "health_context-s1",
+     "question": "How is my health looking this year?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "I have a chronic back problem and I enjoy long distance running",
+      "Based on what I know about you (name: Meera; dob: 1992-06-21; birth_place: Kochi; zodiac: Gemini; element: Air), here is my reading on: I have a chronic back problem and I enjoy long distance running"
+     ]
+    },
+    {
+     "script": "no_relevant_context",
+     "user": "c_health",
+     "session": "no_relevant_context-s1",
+     "question": "What is my lucky number?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": []
+    },
+    {
+     "script": "multi_goal",
+     "user": "c_multi",
+     "session": "multi_goal-s1",
+     "question": "What should I prioritise in my career?",
+     "context_used": [
+      "i want to get a promotion",
+      "i also want to start my",
+      "user_profile"
+     ],
+     "history": [
+      "I want to get a promotion this year",
+      "Based on what I know about you (name: Sanjay; dob: 1993-01-30; birth_place: Jaipur; zodiac: Aquarius; element: Air), here is my reading on: I want to get a promotion this year",
+      "I also want to start my own company",
+      "Based on what I know about you (name: Sanjay; dob: 1993-01-30; birth_place: Jaipur; zodiac: Aquarius; element: Air; goal: i want to get a promotion), here is my reading on: I also want to start my own company"
+     ]
+    },
+    {
+     "script": "preference_language",
+     "user": "c_pref",
+     "session": "preference_language-s1",
+     "question": "What does this month hold for me?",
+     "context_used": [
+      "user_profile"
+     ],
+     "history": [
+      "I prefer replies in Hindi",
+      "Based on what I know about you (name: Priya; dob: 1996-09-09; birth_place: Lucknow; zodiac: Virgo; element: Earth), here is my reading on: I prefer replies in Hindi"
+     ]
+    }
+   ]
+  }
+ },
+ "tier3_real_carried_from": "2026-09-21T12:08:06",
+ "tier4_carried_from": "2026-09-21T12:08:06",
+ "duration_s": 0.1,
+ "sweep": {
+  "baseline": {
+   "tier1": {
+    "accuracy_pct": 96.8,
+    "junk_stored": 2,
+    "facts_missed": 0,
+    "conflict_accuracy_pct": 100.0,
+    "n": 62
+   },
+   "tier2": {
+    "precision_pct": 77.4,
+    "recall_pct": 80.0,
+    "exact_match_pct": 65.2,
+    "correct_silence": "8/8",
+    "avg_injected": 1.35,
+    "n": 23
+   }
+  },
+  "runs": [
+   {
+    "constant": "PROMOTION_THRESHOLD",
+    "value": 0.5,
+    "raw_value": 0.5,
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 93.5,
+    "counter_metric": "junk_stored",
+    "counter": 4,
+    "metrics": {
+     "accuracy_pct": 93.5,
+     "junk_stored": 4,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_THRESHOLD",
+    "value": 0.55,
+    "raw_value": 0.55,
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 96.8,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 96.8,
+     "junk_stored": 2,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": true
+   },
+   {
+    "constant": "PROMOTION_THRESHOLD",
+    "value": 0.6,
+    "raw_value": 0.6,
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 95.2,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 95.2,
+     "junk_stored": 2,
+     "facts_missed": 1,
+     "conflict_accuracy_pct": 83.3,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_THRESHOLD",
+    "value": 0.65,
+    "raw_value": 0.65,
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 91.9,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 91.9,
+     "junk_stored": 2,
+     "facts_missed": 3,
+     "conflict_accuracy_pct": 66.7,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_THRESHOLD",
+    "value": 0.7,
+    "raw_value": 0.7,
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 88.7,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 88.7,
+     "junk_stored": 2,
+     "facts_missed": 5,
+     "conflict_accuracy_pct": 66.7,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.15,
+    "raw_value": 0.15,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 34.8,
+    "counter_metric": "avg_injected",
+    "counter": 1.74,
+    "metrics": {
+     "precision_pct": 60.0,
+     "recall_pct": 80.0,
+     "exact_match_pct": 34.8,
+     "correct_silence": "7/8",
+     "avg_injected": 1.74,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.2,
+    "raw_value": 0.2,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 34.8,
+    "counter_metric": "avg_injected",
+    "counter": 1.74,
+    "metrics": {
+     "precision_pct": 60.0,
+     "recall_pct": 80.0,
+     "exact_match_pct": 34.8,
+     "correct_silence": "7/8",
+     "avg_injected": 1.74,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.25,
+    "raw_value": 0.25,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 60.9,
+    "counter_metric": "avg_injected",
+    "counter": 1.39,
+    "metrics": {
+     "precision_pct": 75.0,
+     "recall_pct": 80.0,
+     "exact_match_pct": 60.9,
+     "correct_silence": "7/8",
+     "avg_injected": 1.39,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.3,
+    "raw_value": 0.3,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 60.9,
+    "counter_metric": "avg_injected",
+    "counter": 1.39,
+    "metrics": {
+     "precision_pct": 75.0,
+     "recall_pct": 80.0,
+     "exact_match_pct": 60.9,
+     "correct_silence": "7/8",
+     "avg_injected": 1.39,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.4,
+    "raw_value": 0.4,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 65.2,
+    "counter_metric": "avg_injected",
+    "counter": 1.35,
+    "metrics": {
+     "precision_pct": 77.4,
+     "recall_pct": 80.0,
+     "exact_match_pct": 65.2,
+     "correct_silence": "8/8",
+     "avg_injected": 1.35,
+     "n": 23
+    },
+    "is_current": true
+   },
+   {
+    "constant": "RETRIEVAL_FLOOR",
+    "value": 0.5,
+    "raw_value": 0.5,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 47.8,
+    "counter_metric": "avg_injected",
+    "counter": 1.13,
+    "metrics": {
+     "precision_pct": 73.1,
+     "recall_pct": 63.3,
+     "exact_match_pct": 47.8,
+     "correct_silence": "8/8",
+     "avg_injected": 1.13,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "TOP_K",
+    "value": 3,
+    "raw_value": 3,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 65.2,
+    "counter_metric": "avg_injected",
+    "counter": 1.35,
+    "metrics": {
+     "precision_pct": 77.4,
+     "recall_pct": 80.0,
+     "exact_match_pct": 65.2,
+     "correct_silence": "8/8",
+     "avg_injected": 1.35,
+     "n": 23
+    },
+    "is_current": true
+   },
+   {
+    "constant": "TOP_K",
+    "value": 4,
+    "raw_value": 4,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 60.9,
+    "counter_metric": "avg_injected",
+    "counter": 1.57,
+    "metrics": {
+     "precision_pct": 69.4,
+     "recall_pct": 83.3,
+     "exact_match_pct": 60.9,
+     "correct_silence": "8/8",
+     "avg_injected": 1.57,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "TOP_K",
+    "value": 6,
+    "raw_value": 6,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 60.9,
+    "counter_metric": "avg_injected",
+    "counter": 1.78,
+    "metrics": {
+     "precision_pct": 65.9,
+     "recall_pct": 90.0,
+     "exact_match_pct": 60.9,
+     "correct_silence": "8/8",
+     "avg_injected": 1.78,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "TOP_K",
+    "value": 8,
+    "raw_value": 8,
+    "tier": "tier2",
+    "primary_metric": "exact_match_pct",
+    "primary": 60.9,
+    "counter_metric": "avg_injected",
+    "counter": 1.78,
+    "metrics": {
+     "precision_pct": 65.9,
+     "recall_pct": 90.0,
+     "exact_match_pct": 60.9,
+     "correct_silence": "8/8",
+     "avg_injected": 1.78,
+     "n": 23
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_WEIGHTS",
+    "value": "0.35/0.25/0.25/0.15",
+    "raw_value": {
+     "durability": 0.35,
+     "specificity": 0.25,
+     "utility": 0.25,
+     "extraction": 0.15
+    },
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 96.8,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 96.8,
+     "junk_stored": 2,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": true
+   },
+   {
+    "constant": "PROMOTION_WEIGHTS",
+    "value": "0.25/0.25/0.35/0.15",
+    "raw_value": {
+     "durability": 0.25,
+     "specificity": 0.25,
+     "utility": 0.35,
+     "extraction": 0.15
+    },
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 96.8,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 96.8,
+     "junk_stored": 2,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_WEIGHTS",
+    "value": "0.40/0.20/0.25/0.15",
+    "raw_value": {
+     "durability": 0.4,
+     "specificity": 0.2,
+     "utility": 0.25,
+     "extraction": 0.15
+    },
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 96.8,
+    "counter_metric": "junk_stored",
+    "counter": 2,
+    "metrics": {
+     "accuracy_pct": 96.8,
+     "junk_stored": 2,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": false
+   },
+   {
+    "constant": "PROMOTION_WEIGHTS",
+    "value": "0.25/0.25/0.25/0.25",
+    "raw_value": {
+     "durability": 0.25,
+     "specificity": 0.25,
+     "utility": 0.25,
+     "extraction": 0.25
+    },
+    "tier": "tier1",
+    "primary_metric": "accuracy_pct",
+    "primary": 93.5,
+    "counter_metric": "junk_stored",
+    "counter": 4,
+    "metrics": {
+     "accuracy_pct": 93.5,
+     "junk_stored": 4,
+     "facts_missed": 0,
+     "conflict_accuracy_pct": 100.0,
+     "n": 62
+    },
+    "is_current": false
+   }
+  ],
+  "grid": {
+   "PROMOTION_THRESHOLD": [
+    "0.5",
+    "0.55",
+    "0.6",
+    "0.65",
+    "0.7"
+   ],
+   "RETRIEVAL_FLOOR": [
+    "0.15",
+    "0.2",
+    "0.25",
+    "0.3",
+    "0.4",
+    "0.5"
+   ],
+   "TOP_K": [
+    "3",
+    "4",
+    "6",
+    "8"
+   ],
+   "PROMOTION_WEIGHTS": [
+    "{'durability': 0.35, 'specificity': 0.25, 'utility': 0.25, 'extraction': 0.15}",
+    "{'durability': 0.25, 'specificity': 0.25, 'utility': 0.35, 'extraction': 0.15}",
+    "{'durability': 0.4, 'specificity': 0.2, 'utility': 0.25, 'extraction': 0.15}",
+    "{'durability': 0.25, 'specificity': 0.25, 'utility': 0.25, 'extraction': 0.25}"
+   ]
+  }
+ }
+}

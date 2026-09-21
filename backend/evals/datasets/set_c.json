@@ -1,0 +1,216 @@
+{
+ "scripts": [
+  {
+   "id": "new_user",
+   "user": "c_new",
+   "profile": {},
+   "turns": [
+    {
+     "say": "Hello",
+     "assert": {
+      "missing_profile": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "intro_and_goal",
+   "user": "c_rahul",
+   "profile": {
+    "name": "Rahul",
+    "dob": "1995-08-15",
+    "birth_place": "Delhi"
+   },
+   "turns": [
+    {
+     "say": "My name is Rahul. I'm planning to switch jobs next year.",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "What should I focus on for my career?",
+     "assert": {
+      "retrieved": true
+     },
+     "judge": true
+    },
+    {
+     "say": "Why do you say that?",
+     "assert": {
+      "followup": true
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "new_session_recall",
+   "user": "c_rahul",
+   "new_session_before": 1,
+   "turns": [
+    {
+     "say": "I am planning to switch jobs next year",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "What do you remember about my career goals?",
+     "assert": {
+      "retrieved": true
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "irrelevant_chatter",
+   "user": "c_chat",
+   "profile": {
+    "name": "Asha",
+    "dob": "1990-03-12",
+    "birth_place": "Pune"
+   },
+   "turns": [
+    {
+     "say": "I had tea at 4pm",
+     "assert": {
+      "stored": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "correction",
+   "user": "c_move",
+   "profile": {
+    "name": "Vikram",
+    "dob": "1988-11-02",
+    "birth_place": "Chennai"
+   },
+   "turns": [
+    {
+     "say": "I live in Delhi",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "Actually I am moving to Bangalore next month",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "Where should I settle down?",
+     "assert": {
+      "retrieved": true
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "missing_profile",
+   "user": "c_bare",
+   "turns": [
+    {
+     "say": "I want to switch careers",
+     "assert": {
+      "missing_profile": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "health_context",
+   "user": "c_health",
+   "profile": {
+    "name": "Meera",
+    "dob": "1992-06-21",
+    "birth_place": "Kochi"
+   },
+   "turns": [
+    {
+     "say": "I have a chronic back problem and I enjoy long distance running",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "How is my health looking this year?",
+     "assert": {
+      "retrieved": true
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "no_relevant_context",
+   "user": "c_health",
+   "turns": [
+    {
+     "say": "What is my lucky number?",
+     "assert": {
+      "retrieved": false
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "multi_goal",
+   "user": "c_multi",
+   "profile": {
+    "name": "Sanjay",
+    "dob": "1993-01-30",
+    "birth_place": "Jaipur"
+   },
+   "turns": [
+    {
+     "say": "I want to get a promotion this year",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "I also want to start my own company",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "What should I prioritise in my career?",
+     "assert": {
+      "retrieved": true
+     },
+     "judge": true
+    }
+   ]
+  },
+  {
+   "id": "preference_language",
+   "user": "c_pref",
+   "profile": {
+    "name": "Priya",
+    "dob": "1996-09-09",
+    "birth_place": "Lucknow"
+   },
+   "turns": [
+    {
+     "say": "I prefer replies in Hindi",
+     "assert": {
+      "stored": true
+     }
+    },
+    {
+     "say": "What does this month hold for me?",
+     "assert": {},
+     "judge": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,469 @@
+{
+ "rules": "see evals/rules.md",
+ "simple": [
+  {
+   "message": "I'm planning to switch jobs next year",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "career"
+  },
+  {
+   "message": "I want to move into product management",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "career"
+  },
+  {
+   "message": "I am saving up to buy a house by 2028",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "finance"
+  },
+  {
+   "message": "I plan to get married next year",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "relationships"
+  },
+  {
+   "message": "I want to lose fifteen kilos this year",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "health"
+  },
+  {
+   "message": "I am preparing for a product management interview next month",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "career"
+  },
+  {
+   "message": "I intend to start my own consultancy in 2027",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "career"
+  },
+  {
+   "message": "I also want to get a promotion before I leave",
+   "decision": "STORE",
+   "type": "GOAL",
+   "topic": "career"
+  },
+  {
+   "message": "I work as a software engineer in Bangalore",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "career"
+  },
+  {
+   "message": "I live in Delhi with my parents",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "family"
+  },
+  {
+   "message": "I am married and have one daughter",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "family"
+  },
+  {
+   "message": "I have been at my current company for six years",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "career"
+  },
+  {
+   "message": "I am the only earning member in my family",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "finance"
+  },
+  {
+   "message": "I have a chronic back problem",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "health"
+  },
+  {
+   "message": "I am studying part time for an MBA",
+   "decision": "STORE",
+   "type": "ATTRIBUTE",
+   "topic": "education"
+  },
+  {
+   "message": "I prefer replies in Hindi",
+   "decision": "STORE",
+   "type": "PREFERENCE",
+   "topic": ""
+  },
+  {
+   "message": "I would rather you keep answers short",
+   "decision": "STORE",
+   "type": "PREFERENCE",
+   "topic": ""
+  },
+  {
+   "message": "Please do not bring up my divorce again",
+   "decision": "STORE",
+   "type": "PREFERENCE",
+   "topic": ""
+  },
+  {
+   "message": "I like practical advice more than spiritual talk",
+   "decision": "STORE",
+   "type": "PREFERENCE",
+   "topic": ""
+  },
+  {
+   "message": "I am interested in entrepreneurship",
+   "decision": "STORE",
+   "type": "INTEREST",
+   "topic": "career"
+  },
+  {
+   "message": "I have been learning classical music for years",
+   "decision": "STORE",
+   "type": "INTEREST",
+   "topic": "hobbies"
+  },
+  {
+   "message": "I really enjoy long distance running",
+   "decision": "STORE",
+   "type": "INTEREST",
+   "topic": "health"
+  },
+  {
+   "message": "I read a lot about vedic astrology myself",
+   "decision": "STORE",
+   "type": "INTEREST",
+   "topic": "spiritual"
+  },
+  {
+   "message": "I had a job interview last week",
+   "decision": "STORE",
+   "type": "EVENT",
+   "topic": "career"
+  },
+  {
+   "message": "I lost my father in March",
+   "decision": "STORE",
+   "type": "EVENT",
+   "topic": "family"
+  },
+  {
+   "message": "I moved to Pune six months ago",
+   "decision": "STORE",
+   "type": "EVENT",
+   "topic": "travel"
+  },
+  {
+   "message": "I got engaged in December",
+   "decision": "STORE",
+   "type": "EVENT",
+   "topic": "relationships"
+  },
+  {
+   "message": "My name is Rahul and I was born on 15 August 1995 in Delhi",
+   "decision": "STORE",
+   "type": "IDENTITY",
+   "topic": ""
+  },
+  {
+   "message": "I was born at 4:30 in the morning",
+   "decision": "STORE",
+   "type": "IDENTITY",
+   "topic": ""
+  },
+  {
+   "message": "What should I focus on for my career?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Is this a good time to change jobs?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "What does my birth chart say about marriage?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "How is my week looking?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Why do you say that?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Which gemstone suits me?",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Tell me what my chart says about money and family this year",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Show me my career outlook for the next six months",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Explain my moon sign to me",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Give me some advice about my marriage",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Suggest a good date for my new business",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Should I invest in property this year",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Can you look at my relationship prospects",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "I'm feeling really anxious today",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I am so tired this week",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I'm in a bad mood right now",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I am quite busy at the moment",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I have a headache today",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I had tea at 4pm",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "I watched a movie yesterday evening",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "I took the metro to work this morning",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "I ate biryani for lunch",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "I want to do better",
+   "decision": "DISCARD",
+   "type": "GOAL",
+   "topic": ""
+  },
+  {
+   "message": "Things are fine",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "I hope everything goes well",
+   "decision": "DISCARD",
+   "type": "GOAL",
+   "topic": ""
+  },
+  {
+   "message": "I am okay I guess",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "Leo is a fire sign ruled by the sun",
+   "decision": "DISCARD",
+   "type": "IDENTITY",
+   "topic": ""
+  },
+  {
+   "message": "My friend is a Scorpio",
+   "decision": "DISCARD",
+   "type": "IDENTITY",
+   "topic": ""
+  },
+  {
+   "message": "Astrology is very popular in India",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "Mercury is in retrograde this month",
+   "decision": "DISCARD",
+   "type": "EVENT",
+   "topic": ""
+  },
+  {
+   "message": "ok thanks",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "hello",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  },
+  {
+   "message": "that makes sense",
+   "decision": "DISCARD",
+   "type": "STATE",
+   "topic": ""
+  }
+ ],
+ "conflict": [
+  {
+   "existing": {
+    "type": "ATTRIBUTE",
+    "value": "living in Delhi",
+    "topic": "travel"
+   },
+   "message": "Actually I am moving to Bangalore next month",
+   "candidate": {
+    "type": "ATTRIBUTE",
+    "value": "living in Bangalore",
+    "topic": "travel"
+   },
+   "expected": "SUPERSEDE",
+   "why": "city is single-valued"
+  },
+  {
+   "existing": {
+    "type": "PREFERENCE",
+    "value": "replies in English",
+    "topic": ""
+   },
+   "message": "I would prefer Hindi from now on",
+   "candidate": {
+    "type": "PREFERENCE",
+    "value": "replies in Hindi",
+    "topic": ""
+   },
+   "expected": "SUPERSEDE",
+   "why": "language is single-valued"
+  },
+  {
+   "existing": {
+    "type": "ATTRIBUTE",
+    "value": "working at Infosys",
+    "topic": "career"
+   },
+   "message": "I joined Google last month",
+   "candidate": {
+    "type": "ATTRIBUTE",
+    "value": "working at Google",
+    "topic": "career"
+   },
+   "expected": "SUPERSEDE",
+   "why": "employer is single-valued"
+  },
+  {
+   "existing": {
+    "type": "GOAL",
+    "value": "get a promotion",
+    "topic": "career"
+   },
+   "message": "I also want to start my own company",
+   "candidate": {
+    "type": "GOAL",
+    "value": "start my own company",
+    "topic": "career"
+   },
+   "expected": "COEXIST",
+   "why": "a person can hold two career goals at once"
+  },
+  {
+   "existing": {
+    "type": "INTEREST",
+    "value": "classical music",
+    "topic": "hobbies"
+   },
+   "message": "I am also getting into photography",
+   "candidate": {
+    "type": "INTEREST",
+    "value": "photography",
+    "topic": "hobbies"
+   },
+   "expected": "COEXIST",
+   "why": "interests are multi-valued"
+  },
+  {
+   "existing": {
+    "type": "GOAL",
+    "value": "switch jobs next year",
+    "topic": "career"
+   },
+   "message": "I am still planning to switch jobs next year",
+   "candidate": {
+    "type": "GOAL",
+    "value": "switch jobs next year",
+    "topic": "career"
+   },
+   "expected": "REINFORCE",
+   "why": "same meaning restated"
+  }
+ ]
+}

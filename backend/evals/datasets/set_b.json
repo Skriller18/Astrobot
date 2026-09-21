@@ -1,0 +1,269 @@
+{
+ "seed": [
+  {
+   "id": "m_goal_switch",
+   "type": "GOAL",
+   "value": "switch jobs next year",
+   "topic": "career",
+   "confidence": 0.9
+  },
+  {
+   "id": "m_goal_pm",
+   "type": "GOAL",
+   "value": "move into product management",
+   "topic": "career",
+   "confidence": 0.85
+  },
+  {
+   "id": "m_goal_house",
+   "type": "GOAL",
+   "value": "buy a house by 2028",
+   "topic": "finance",
+   "confidence": 0.85
+  },
+  {
+   "id": "m_goal_marry",
+   "type": "GOAL",
+   "value": "get married next year",
+   "topic": "relationships",
+   "confidence": 0.8
+  },
+  {
+   "id": "m_attr_job",
+   "type": "ATTRIBUTE",
+   "value": "software engineer in Bangalore",
+   "topic": "career",
+   "confidence": 0.9
+  },
+  {
+   "id": "m_attr_family",
+   "type": "ATTRIBUTE",
+   "value": "only earning member at home",
+   "topic": "finance",
+   "confidence": 0.85
+  },
+  {
+   "id": "m_attr_married",
+   "type": "ATTRIBUTE",
+   "value": "married with one daughter",
+   "topic": "family",
+   "confidence": 0.9
+  },
+  {
+   "id": "m_attr_back",
+   "type": "ATTRIBUTE",
+   "value": "chronic back problem",
+   "topic": "health",
+   "confidence": 0.8
+  },
+  {
+   "id": "m_attr_mba",
+   "type": "ATTRIBUTE",
+   "value": "studying part time for an MBA",
+   "topic": "education",
+   "confidence": 0.75
+  },
+  {
+   "id": "m_pref_hindi",
+   "type": "PREFERENCE",
+   "value": "replies in Hindi",
+   "topic": "",
+   "confidence": 0.95
+  },
+  {
+   "id": "m_pref_short",
+   "type": "PREFERENCE",
+   "value": "short answers",
+   "topic": "",
+   "confidence": 0.8
+  },
+  {
+   "id": "m_int_entre",
+   "type": "INTEREST",
+   "value": "entrepreneurship",
+   "topic": "career",
+   "confidence": 0.7
+  },
+  {
+   "id": "m_int_music",
+   "type": "INTEREST",
+   "value": "classical music",
+   "topic": "hobbies",
+   "confidence": 0.65
+  },
+  {
+   "id": "m_int_running",
+   "type": "INTEREST",
+   "value": "long distance running",
+   "topic": "health",
+   "confidence": 0.7
+  },
+  {
+   "id": "m_evt_interview",
+   "type": "EVENT",
+   "value": "job interview last week",
+   "topic": "career",
+   "confidence": 0.8
+  },
+  {
+   "id": "m_evt_father",
+   "type": "EVENT",
+   "value": "lost his father in March",
+   "topic": "family",
+   "confidence": 0.85
+  },
+  {
+   "id": "m_evt_moved",
+   "type": "EVENT",
+   "value": "moved to Pune six months ago",
+   "topic": "travel",
+   "confidence": 0.75
+  },
+  {
+   "id": "m_evt_engaged",
+   "type": "EVENT",
+   "value": "got engaged in December",
+   "topic": "relationships",
+   "confidence": 0.8
+  }
+ ],
+ "queries": [
+  {
+   "question": "What should I focus on for my career?",
+   "expect": [
+    "m_goal_switch",
+    "m_goal_pm",
+    "m_attr_job"
+   ]
+  },
+  {
+   "question": "Is this a good year to change jobs?",
+   "expect": [
+    "m_goal_switch",
+    "m_attr_job",
+    "m_evt_interview"
+   ]
+  },
+  {
+   "question": "How did my interview go astrologically?",
+   "expect": [
+    "m_evt_interview",
+    "m_goal_pm"
+   ]
+  },
+  {
+   "question": "Should I start a business?",
+   "expect": [
+    "m_int_entre",
+    "m_goal_switch"
+   ]
+  },
+  {
+   "question": "Will I get a promotion?",
+   "expect": [
+    "m_goal_pm",
+    "m_attr_job"
+   ]
+  },
+  {
+   "question": "What do the stars say about my finances?",
+   "expect": [
+    "m_goal_house",
+    "m_attr_family"
+   ]
+  },
+  {
+   "question": "Is it a good time to buy property?",
+   "expect": [
+    "m_goal_house"
+   ]
+  },
+  {
+   "question": "Can I afford to take a risk with money?",
+   "expect": [
+    "m_attr_family",
+    "m_goal_house"
+   ]
+  },
+  {
+   "question": "What does my chart say about marriage?",
+   "expect": [
+    "m_goal_marry",
+    "m_evt_engaged",
+    "m_attr_married"
+   ]
+  },
+  {
+   "question": "How will my family life be this year?",
+   "expect": [
+    "m_attr_married",
+    "m_evt_father"
+   ]
+  },
+  {
+   "question": "Tell me about my relationship prospects",
+   "expect": [
+    "m_goal_marry",
+    "m_evt_engaged"
+   ]
+  },
+  {
+   "question": "How is my health looking?",
+   "expect": [
+    "m_attr_back",
+    "m_int_running"
+   ]
+  },
+  {
+   "question": "Should I start a new fitness routine?",
+   "expect": [
+    "m_int_running",
+    "m_attr_back"
+   ]
+  },
+  {
+   "question": "Will my studies go well?",
+   "expect": [
+    "m_attr_mba"
+   ]
+  },
+  {
+   "question": "Is relocation favourable for me?",
+   "expect": [
+    "m_evt_moved"
+   ]
+  },
+  {
+   "question": "Which gemstone should I wear?",
+   "expect": []
+  },
+  {
+   "question": "What is my lucky number?",
+   "expect": []
+  },
+  {
+   "question": "Tell me about mercury retrograde",
+   "expect": []
+  },
+  {
+   "question": "What colour should I wear on Tuesday?",
+   "expect": []
+  },
+  {
+   "question": "Is today auspicious for travel by air?",
+   "expect": []
+  },
+  {
+   "question": "Why do you say that?",
+   "expect": []
+  },
+  {
+   "question": "What do you mean?",
+   "expect": []
+  },
+  {
+   "question": "Can you explain that a bit more?",
+   "expect": []
+  }
+ ]
+}
